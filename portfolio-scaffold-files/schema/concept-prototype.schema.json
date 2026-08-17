@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/cloudioglobal/Portfolio/schema/concept-prototype.schema.json",
+  "title": "ConceptPrototype",
+  "description": "A speculative feature/product/service concept designed for a named target company (e.g. an unsolicited concept mockup shared on social). Mirrors the ConceptPrototype entity on the live site.",
+  "type": "object",
+  "properties": {
+    "title": { "type": "string", "description": "Concept title" },
+    "slug": { "type": "string", "description": "URL-friendly identifier / folder name" },
+    "target_company": { "type": "string", "description": "The company the concept is designed for" },
+    "company_handle": { "type": "string", "description": "Social handle to tag when posting (e.g. @acme)" },
+    "company_linkedin_url": { "type": "string", "description": "Company LinkedIn page URL" },
+    "company_instagram_url": { "type": "string", "description": "Company Instagram URL" },
+    "industry": { "type": "string", "description": "Industry sector of the target company" },
+    "concept_type": {
+      "type": "string",
+      "enum": ["feature", "service", "product", "operations", "other"],
+      "default": "feature"
+    },
+    "summary": { "type": "string", "description": "Short public summary, also used as the social caption" },
+    "context_challenge": { "type": "string", "description": "The opportunity or problem for the target company" },
+    "solution_process": { "type": "string", "description": "The concept designed" },
+    "artifacts_deliverables": { "type": "string", "description": "What the concept produces (mockups, specs)" },
+    "outcome_impact": { "type": "string", "description": "Why it matters / expected outcome" },
+    "mockup_images": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Wireframe / mockup image URLs. First image is the cover."
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Topic / technology tags"
+    },
+    "linkedin_post_url": { "type": "string" },
+    "instagram_post_url": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["published", "draft"],
+      "default": "published"
+    },
+    "publish_date": { "type": "string", "format": "date" },
+    "display_order": { "type": "number", "default": 0 }
+  },
+  "required": ["slug", "title", "target_company", "summary"]
+}
