@@ -12,6 +12,7 @@ Layered on top of that structural gap was an operational one. The nine solution 
 
 This entry is the engineering-level companion to the main OnDemand CX case study at; 
 https://cloudioconsulting.com/PortfolioDetail/ondemand-cx-reference-architecture-private-cloud-hybrid-resilience
+
 It goes deeper into how the private cloud, the vendor licensing strategy and the hybrid resilience design were actually built, and into the wider product management and go-to-market work that ran alongside it, since deciding what to build, when to build it and what to leave out was as much a part of this role as the infrastructure engineering itself. See the main case study for the headline business outcomes.
 
 ## The Solution / Process
