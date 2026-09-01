@@ -6,15 +6,13 @@ The engineering-level companion to the OnDemand CX case study: how the platform,
 
 Joined an enterprise contact-centre software and services company as Principal Solutions Manager, in a sales and presales role, and later moved into Head of Cloud, on the product side. The job was to support the CTO and represent infrastructure and cloud in front of customers, working alongside the solution architects and VP Solutions & Cloud Market, who built the contact-centre application platform on Avaya's enterprise stack, covering voice, email, web chat and SMS.
 
-Customers wanted this for a consistent set of reasons: Avaya's contact-centre stack is hard to run and most didn't want that operational responsibility themselves, some were actively exiting their own data centres, most wanted to swap capital expenditure for operating expenditure while a few needed a mix of both, and others valued cloud but couldn't use public cloud for compliance, sovereignty, latency or legal reasons. Because OnDemand CX ran as an isolated private cloud dedicated to a single customer at a time, it gave them the benefits of cloud without the constraints that ruled public cloud out.
+Customers wanted this kind of platform for a consistent set of reasons. Avaya's contact-centre stack is genuinely hard to run, and most customers had no interest in taking on that operational responsibility themselves. Some were also actively trying to exit their own data centres altogether. Commercially, most wanted to swap capital expenditure for operating expenditure, and a smaller group needed a mix of both, which is part of why the pricing tool was built to handle hybrid commercial models rather than a single Opex-only structure. And a further group saw the value of moving to cloud but couldn't use public cloud, for compliance, data sovereignty, strict latency requirements, or legal reasons. Because OnDemand CX ran as an isolated, dedicated private cloud built for a single customer at a time, sometimes on that customer's own compute nodes for the most sensitive components and often on their own nodes throughout, it gave customers the operational and commercial benefits of cloud without the parts of public cloud some of them simply couldn't use.
 
 At the time, the business only sold Avaya IP Office on their cloud fabric, aimed at small and medium customers, typically businesses with up to a few hundred agents. Avaya Aura, Avaya's enterprise-grade platform built for large, multi-site deployments, simply wasn't on offer. Two things stood in the way. The private cloud clusters running the platform were built to a mid-market spec: sized, configured and licensed around IP Office's much lighter compute, memory and I/O profile, with nowhere near the headroom Aura's Session Manager, System Manager and Communication Manager estate would need to run at enterprise density and scale. And even setting the hardware problem aside, running Aura on that infrastructure would not have been commercially viable. The margins on a mid-market-spec cluster stretched to enterprise density simply didn't work.
 
 Layered on top of that structural gap was an operational one. The nine solution architects scoped the application layer, the Avaya stack itself, but infrastructure-level scoping, VM sizing, servers, storage and networking, sat with the CTO personally for every single deal, on top of everything else on his plate. With no standardised reference architecture or shared pricing logic to work from, each deal's infrastructure had to be scoped from scratch, and having one person carrying that across the whole pipeline is a large part of why solution design and scoping took up to two weeks per customer. Without a shared documentation standard behind it either, pricing and scoping varied between similar deals, and the support team sometimes inherited infrastructure that hadn't been scoped to a consistent standard.
 
-This entry is the engineering-level companion to the main OnDemand CX case study at https://cloudioconsulting.com/PortfolioDetail/ondemand-cx-reference-architecture-private-cloud-hybrid-resilience. 
-
-It goes deeper into how the private cloud, the vendor licensing strategy and the hybrid resilience design were actually built, and into the wider product management and go-to-market work that ran alongside it, since deciding what to build, when to build it and what to leave out was as much a part of this role as the infrastructure engineering itself. See the main case study for the headline business outcomes.
+This entry is the engineering-level companion to the main OnDemand CX case study at https://cloudioconsulting.com/PortfolioDetail/ondemand-cx-reference-architecture-private-cloud-hybrid-resilience. It goes deeper into how the private cloud, the vendor licensing strategy and the hybrid resilience design were actually built, and into the wider product management and go-to-market work that ran alongside it, since deciding what to build, when to build it and what to leave out was as much a part of this role as the infrastructure engineering itself. See the main case study for the headline business outcomes.
 
 ## The Solution / Process
 
@@ -42,39 +40,43 @@ Mid-market customers ran a lighter version of the same idea, on Avaya IP Office 
 
 Co-owned/led this as a product from the start with the VP Solutions & Cloud Market, not just an infrastructure design exercise, and it followed roughly the same discipline a product manager would apply to any commercial platform: find the real opportunity, decide deliberately what to build and in what order, keep the business aligned around it as it evolved, take it to market properly, and keep improving it after launch rather than treating launch as the finish line. Breaking that down step by step below.
 
-## 1. Spotting the opportunity
+1. Spotting the opportunity
 
 This started in the room, not on paper. Sitting in on customer conversations and RFx proposals directly, rather than only hearing about them afterwards from the solution architects, made the pattern obvious. Enterprise prospects were asking for capability the business genuinely couldn't offer, and mid-market already had a base-level scoping tool in place that proved the scoping tool approach itself worked. Both were signals of the same underlying gap, an addressable Aura market the business had effectively written off, and no shared, repeatable way of taking any of it to market.
 
-## 2. Framing it as a product, not a project
+2. Framing it as a product, not a project
 
 The instinct could easily have been to treat this as a one-off infrastructure upgrade, build a bigger cluster and move on. Framing it as a product instead meant defining it properly: who it was for, solution architects and salespeople first, customers second, what it needed to do consistently, generate accurate pricing and a validated design in minutes rather than weeks, and how it would need to keep working as the underlying application platform kept changing. That framing is what led to building the reference architecture and the pricing tool together, as one product, rather than the reference architecture alone as a purely technical exercise.
 
-## 3. Prioritising the roadmap
+3. Prioritising the roadmap
 
 Not everything the pricing tool could technically do got pushed further. It could price an up-sell into running a customer's internal IT stack, and that capability existed, but taking it further was a deliberate call not to make, since running general IT infrastructure wasn't the business's core strength or its differentiator. A roadmap is as much about what you don't build as what you do, and that trade-off is what kept the roadmap focused on the tool's actual differentiator, the contact-centre platform itself and everything around it, Aura, Oceana, Verint and other contact-centre technologies, rather than diluting it by chasing every technically possible extension.
 
-## 4. Aligning stakeholders across the business
+4. Aligning stakeholders across the business
 
 None of this lived in a vacuum. Arranged and ran regular stakeholder meetings across legal and compliance, support and managed services, leadership and the solution architecture team, specifically so a change on one side didn't blindside the others, a new Avaya release, a new compliance requirement, or a support process change. That governance is what let the reference architecture and pricing tool stay accurate and trusted over time rather than drifting out of sync with what the rest of the business was actually doing.
 
-## 5. Taking it to market
+5. Taking it to market
 
 Produced sales material and drafted marketing content for the marketing team to use, so the commercial side of the business had the same accurate story to tell that the reference architecture gave the technical side. Built two tiers of architecture diagram to support it, detailed versions for solution architects to actually work from, and simplified, high-level versions with the key IP stripped out for customer-facing conversations. Contributed directly to RFx proposals and sat in on customer meetings, treating those conversations as a source of requirements as much as a sales activity, and feeding what came out of them back into the product rather than treating go-to-market as a one-way broadcast.
 
-## 6. Iterating after launch
+6. Iterating after launch
 
 Kept reviewing the private cloud architecture in production with the CTO and lead engineer after it shipped, rather than treating the initial build as finished, and fed improvements back into the reference architecture and pricing model wherever something wasn't performing as it should. That continuous review is also what surfaced the extensibility work covered in the next section. Once the core Aura and IP Office pricing was proven and reliable, extending it to Oceana, Verint and other contact-centre technologies was the next logical iteration, not a separate project started from scratch.
 
-## 7. Where it led next
+7. Where it led next
 
 That same prioritisation discipline, deciding deliberately what to build and what to leave for later, is also what turned the pricing tool's extensibility work into designing and scoping a backup-as-a-service and disaster-recovery-as-a-service offer further down the roadmap. That offer is covered as its own concept proposition rather than here.
 
 ## Extending the pricing tool beyond Aura
 
-The pricing tool wasn't limited to IP Office and Aura. It was designed to scale across the whole of Avaya's product range, including Oceana, and to price in extra value-add services on top, including line items for Verint and other contact-centre technologies, so a customer conversation could cover workforce optimisation or analytics add-ons in the same pricing exercise as the core platform, rather than as a separate quote later. 
+The pricing tool wasn't limited to IP Office and Aura. It was designed to scale across the whole of Avaya's product range, including Oceana, and to price in extra value-add services on top, including line items for Verint and other contact-centre technologies, so a customer conversation could cover workforce optimisation or analytics add-ons in the same pricing exercise as the core platform, rather than as a separate quote later. It could even price an up-sell into running a customer's internal IT stack on the same infrastructure, extending the business's footprint with that customer well beyond the contact centre. That side was never pursued further, since running general IT infrastructure wasn't the business's core strength or its unique selling point, and chasing it would have diluted focus away from what actually differentiated the business. A roadmap is as much about what you don't build as what you do, and that was a deliberate prioritisation call rather than a missed opportunity.
 
-What the extensibility work did lead to was a backup-as-a-service and disaster-recovery-as-a-service potential offers, designed and architected as its own piece of work once the reference architecture and pricing logic proved it could be extended to cover services beyond the core contact-centre platform. That's substantial enough to deserve its own concept proposition, so it isn't covered in detail here.
+What the extensibility work did lead to was a backup-as-a-service and disaster-recovery-as-a-service potential offer, designed and architected as its own piece of work once the reference architecture and pricing logic proved it could be extended to cover services beyond the core contact-centre platform. That's substantial enough to deserve its own concept proposition, so it isn't covered in detail here.
+
+## A cut-down variant for customer-owned infrastructure
+
+Alongside the centrally hosted private cloud model, also designed a cut-down version of the reference architecture that could be deployed in a customer's co-location facility or their own on-premises data centre, rather than the customer consuming the private cloud platform hosted by the business. It reused the same standardised VM sizing, storage and network design principles built for the hosted platform, scoped down to a footprint sized for a single customer's environment rather than a shared, multi-tenant private cloud, effectively packaging the reference architecture as a deployable blueprint rather than a hosted service.
 
 ## The Dell OEM partnership
 
@@ -96,8 +98,6 @@ Between the Dell negotiation and the three certification tracks, both halves of 
 
 The application platform itself, owned by the solution architecture team and the VP Solutions & Cloud Market, evolved substantially over the course of this role: from siloed multi-channel routing, where voice and each digital channel ran on effectively separate systems stitched together, to true omnichannel, and eventually to Avaya Oceana's unified desktop. Every time it shipped a new evolution, the infrastructure and middleware layer underneath had to keep pace, with new compute and storage profiles, new licensing implications, and a reference architecture and pricing model that had to be re-validated rather than left stale. That ongoing alignment between what the application team shipped and what the infrastructure and commercial layers underneath could actually support was the part this role owned throughout.
 
-Alongside the centrally hosted private cloud model, also designed a cut-down version of the reference architecture that we could deploy in a customers co-location facility or their own on-premises data centres, rather than consuming the private cloud platform hosted by our business. It reused the same standardised VM sizing, storage and network design principles built for the hosted platform, scoped down to a footprint sized for a single customer's environment rather than a shared, multi-tenant private cloud, effectively packaging the reference architecture as a deployable blueprint rather than a hosted service.
-
 ## Monitoring, security and running at scale
 
 Worked with the support and managed service team to optimise the platform's centralised monitoring stack, Prometheus for metrics collection and Grafana for the dashboards built on top of it, giving visibility across a compute, storage and network estate that grew to over 1,000 VMs and a number of containers. At that scale, monitoring stopped being optional tooling and became the only practical way to know whether the estate was healthy. Helped standardise endpoint and server security through Sophos Enterprise, and backup through Veeam Backup & Replication, across the platform, so security and data protection followed the same standardised model the compute layer did, rather than varying site by site.
@@ -111,8 +111,9 @@ Also designed a hybrid resilience layer for the platform, using AWS as a standby
 ## The Artifacts / Deliverables
 
 - Standardised infrastructure reference architecture: tested VM sizing, storage tiering and network design baselines, replacing the CTO's manual, deal-by-deal infrastructure scoping with one validated standard solution architects could use directly
-- Self-serve Excel pricing tool, slider-driven and validated at 100% accuracy against final designs, automatically calculating VMware vSphere/vSAN licensing (via VMware's vRAM-based methodology), Veeam and Sophos licensing, managed services costs, and customer-side networking (Cisco hardware, WAN, SIP trunking, internet breakout). Worked with my VP and wider product owners to scope across the full Avaya product range (IP Office, Aura and Oceana) plus third-party add-ons such as Verint
-- Backup-as-a-Service and DR-as-a-Service offer propostiion, designed and architected off the back of the pricing tool's extensibility (its own conceptual design covers this in detail - TBC)
+- Self-serve Excel pricing tool, slider-driven and validated at 100% accuracy against final designs, automatically calculating VMware vSphere/vSAN licensing (via VMware's vRAM-based methodology), Veeam and Sophos licensing, managed services costs, and customer-side networking (Cisco hardware, WAN, SIP trunking, internet breakout). Worked with the VP Solutions & Cloud Market and wider product owners to scope across the full Avaya product range (IP Office, Aura and Oceana) plus third-party add-ons such as Verint
+- Backup-as-a-Service and DR-as-a-Service offer proposition, designed and architected off the back of the pricing tool's extensibility (covered in its own concept proposition, still to be confirmed)
+- Cut-down, customer-deployed variant of the reference architecture, for co-location or on-premises data centres
 - Dell OEM hyperconverged private cloud on VMware vSAN Ready Nodes (108 cores per node, dual 54-core CPUs), dual active-active/active-passive data centres designs
 - Preferential Dell pricing on enterprise-grade server hardware, secured as part of the same negotiation that brought compute costs down
 - Personally-earned VMware, Veeam and Sophos certifications, used to move partner tiers and unlock enterprise licensing entitlements across the stack
