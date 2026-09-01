@@ -1,4 +1,4 @@
-# CIaaS Technical Deep Dive: Reference Architecture, Consumption Modelling & Partner Go-to-Market
+# Converged Infrastructure as a  Service (CIaaS) Technical Deep Dive: Reference Architecture, Consumption Modelling & Partner Go-to-Market
 
 The engineering-level companion to the Converged Infrastructure as a Service case study: how the platform, the consumption model and the partner go-to-market behind it were actually built.
 
