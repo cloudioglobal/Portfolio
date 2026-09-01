@@ -1,9 +1,9 @@
-# Concept title — for [Target Company]
+# Concept title, for [target company]
 
-> Short public summary / social caption (matches `summary` in data.json).
+> Short public summary, also used as the social caption.
 
-**Concept type:** feature · service · product · operations · other
-**Industry:** —
+**Concept type:** feature, service, product, operations or other
+**Industry:**
 
 ## The Context / Challenge
 
@@ -15,14 +15,14 @@ The concept designed.
 
 ## The Artifacts / Deliverables
 
-What the concept produces — mockups, specs.
+What the concept produces, such as mockups and specifications.
 
 ## The Outcome / Impact
 
-Why it matters / expected outcome.
+Why it matters and the expected outcome.
 
-**Tags:** —
+**Tags:**
 
 ---
 
-*This README is generated from [`data.json`](./data.json) in this folder — keep the two in sync. See [`schema/concept-prototype.schema.json`](../../schema/concept-prototype.schema.json) for the field definitions this mirrors on cloudioconsulting.com.*
+*Mirrors the ConceptPrototype fields on cloudioconsulting.com: title, target_company, company_handle, company_linkedin_url, company_instagram_url, industry, concept_type, summary, context_challenge, solution_process, artifacts_deliverables, outcome_impact, mockup_images, tags, linkedin_post_url, instagram_post_url, status, publish_date, display_order.*
