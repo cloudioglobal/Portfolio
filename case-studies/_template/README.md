@@ -1,29 +1,27 @@
-# Case study title
+Case study title
 
-**Client:** Confidential / Name · **Industry:** · **Engagement:** advisory · hands-on · interim
+Client: Confidential or name | Industry: | Engagement: advisory, hands-on or interim
 
-## Context
+Context
 
 Background and context.
 
-## Challenge
+Challenge
 
 The problem or challenge faced.
 
-## Approach
+Approach
 
 How the solution was approached.
 
-## Outcome
+Outcome
 
 Results and outcomes achieved.
 
-## Learnings
+Learnings
 
 Key learnings and insights.
 
-**Services used:** —
+Services used:
 
----
-
-*This README is generated from [`data.json`](./data.json) in this folder — keep the two in sync. See [`schema/case-study.schema.json`](../../schema/case-study.schema.json) for the field definitions this mirrors on cloudioconsulting.com.*
+Mirrors the CaseStudy fields on cloudioconsulting.com: title, slug, client_name, industry, context, challenge, approach, outcome, learnings, services_used, engagement_type, is_anonymised, featured_image, published, publish_date, description (max 1000 characters).
