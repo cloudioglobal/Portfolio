@@ -14,7 +14,7 @@ Product and platform work, each with a matching entry on the website.
 
 Five pillars of a converged consumption services portfolio, built as a Technical Product Manager at an enterprise data infrastructure and hybrid cloud vendor.
 
-- [Converged Infrastructure as a Service](./product/xaas/converged-infrastructure-as-a-service/README.md) - reference architecture, t-shirt sizing, consumption modelling and the partner go-to-market
+- [Converged Infrastructure as a Service](./products/xaas/converged-infrastructure-as-a-service/README.md) - reference architecture, t-shirt sizing, consumption modelling and the partner go-to-market
 - Network as a Service with NetFoundry - removing customer VPN dependencies from deployment (in progress)
 - Bare Metal as a Service with Canonical MaaS - third-party provisioning integrated into the platform management layer (in progress)
 - AI-as-a-Service - a proposed complementary pillar, including an alternative to the incumbent AI enterprise stack (in progress)
@@ -22,7 +22,7 @@ Five pillars of a converged consumption services portfolio, built as a Technical
 
 ### Earlier work
 
-- [OnDemand CX: Reference Architecture, Private Cloud & Hybrid Resilience](./product/ondemand-cx-reference-architecture/README.md) - private cloud engineering, vendor licensing strategy and hybrid resilience for an enterprise contact centre platform
+- [OnDemand CX: Reference Architecture, Private Cloud & Hybrid Resilience](./products/ondemand-cx-reference-architecture/README.md) - private cloud engineering, vendor licensing strategy and hybrid resilience for an enterprise contact centre platform
 
 ## Case studies
 
@@ -35,7 +35,7 @@ Concept propositions and prototypes designed for a named target company. See [`c
 ## How this repository is organised
 
 ```
-projects/       Work I've Built entries, mirroring the PortfolioItem records on the website
+products/       Work I've Built entries, mirroring the PortfolioItem records on the website
 case-studies/   Client engagement case studies, mirroring the CaseStudy records
 concepts/       Concept propositions, mirroring the ConceptPrototype records
 ```
