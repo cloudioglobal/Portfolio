@@ -15,7 +15,7 @@ Product and platform work, each with a matching entry on the website.
 Five pillars of a converged consumption services portfolio, built as a Technical Product Manager at an enterprise data infrastructure and hybrid cloud vendor.
  
 - [Converged Infrastructure as a Service](./products/xaas/converged-infrastructure-as-a-service/README.md) - reference architecture, t-shirt sizing, consumption modelling and the partner go-to-market
-- [Bare Metal as a Service with Canonical MaaS](.products/products/xaas/bare-metal-as-a-service) - repositioning a failed in-house product, build-versus-buy, and integration into the platform management plane
+- [Bare Metal as a Service with Canonical MaaS](products/products/xaas/bare-metal-as-a-service/README.md) - repositioning a failed in-house product, build-versus-buy, and integration into the platform management plane
 - Network as a Service with NetFoundry - removing customer VPN dependencies from deployment (in progress)
 - AI-as-a-Service - a proposed complementary pillar, including an alternative to the incumbent AI enterprise stack (in progress)
 - Next Generation Storage-as-a-Service and Extreme Tier - unified platform and parallel storage for high throughput and Edge AI use cases (in progress)
