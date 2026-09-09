@@ -2,7 +2,7 @@
  
 Technical product management and solution architecture work, written up in full.
  
-This repository holds the long-form versions of the work published at [cloudioconsulting.com](https://cloudioconsulting.com). The website carries a concise, outcome-led summary of each piece. The entries here are the deep dives: full stack detail, the decisions behind the design, what was deliberately not built, and what state the work was in when it ended.
+This repository holds the long-form versions of the work published at [cloudioconsulting.com](https://cloudioconsulting.com/portfolio). The website carries a concise, outcome-led summary of each piece. The entries here are the deep dives: full stack detail, the decisions behind the design, what was deliberately not built, and what state the work was in when it ended.
  
 Each entry follows the same four sections: The Context / Challenge, The Solution / Process, The Artifacts / Deliverables, The Outcome / Impact.
  
