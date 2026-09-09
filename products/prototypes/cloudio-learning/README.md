@@ -3,7 +3,9 @@
 > The engineering-level companion to the Cloudio Learning case study: how the platform was built, what was deliberately traded off, and what broke badly enough to stop development and force a rebuild.
  
 **Type:** prototype
-**Status:** live, development paused pending rebuild
+**Status:** live at https://learn.cloudio.co.uk, development paused pending rebuild
+ 
+The app is publicly reachable and the core loop works. Parts of it do not, following the internationalisation retrofit described below. It is linked here in that state deliberately, because the failure is the point of the entry rather than something to be tidied away before showing it.
  
 ## The Context / Challenge
  
@@ -214,7 +216,7 @@ Two things are unresolved in that plan and should be settled before any of it is
 - **Backend:** Base44, providing auth, document database, serverless functions, integrations and hosting
 - **AI:** a single built-in LLM integration with model selection and web-context support on compatible models
 - **Platform integrations available:** file upload, image, speech and video generation, audio transcription, email, push notification, data extraction from uploads, signed URLs
-- **Deployment:** Base44 hosting with custom domains and PWA support
+- **Deployment:** Base44 hosting with custom domains and PWA support, published at https://learn.cloudio.co.uk
  
 ### The role of AI assistance
  
@@ -241,7 +243,7 @@ The second-order effect matters as much. Because execution was cheap, scope grew
  
 ## The Outcome / Impact
  
-- Working platform reachable at its published URL, with the core loop functional: courses can be added from any URL, study time tracked across navigation, progress marked, and the week seen at a glance
+- Platform live and publicly reachable at https://learn.cloudio.co.uk, with the core loop functional: courses can be added from any URL, study time tracked across navigation, progress marked, and the week seen at a glance. Parts of the app remain broken from the paused retrofit, and it is linked in that state rather than withdrawn
 - Roughly 45 entities, 50-plus pages and 100-plus components delivered solo, which is the clearest available evidence of what AI-assisted development compresses and what it does not
 - Internationalisation retrofit failed and stopped development. The single most valuable output of the project is the resulting principle: i18n is a day-one architectural decision, its retrofit cost is superlinear, and no amount of incremental patching converges
 - Failure converted into a design constraint rather than carried as debt or hidden. The rebuild is scoped around the lesson, with i18n present from the first commit
