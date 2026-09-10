@@ -1,4 +1,4 @@
-# AI-as-a-Service: An Open Source Alternative to the Enterprise AI Stack, and the Managed Services Gap Behind It
+# AI-as-a-Service: An Open Source Alternative to the Nvidia AI Enterprise Stack, and the Managed Services Gap Behind It
  
 > The engineering-level companion to the AI-as-a-Service case study: a component-level substitution analysis of a proprietary enterprise AI software stack, the internal capability check that made it credible, and the missing managed services layer it exposed across the whole AI proposition.
  
