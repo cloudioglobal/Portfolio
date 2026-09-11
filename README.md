@@ -16,9 +16,9 @@ Product and platform work, each with a matching entry on the website.
  
 ### Platform
  
-- [Core Platform: Defining the Shared Services Layer for Three Enterprise Products](./products/core-platform/README.md) - Lead Product Manager for the shared platform underneath three enterprise products in a safety-critical industry. Rationalising a fragmented capability model, a 171-requirement non-functional baseline written where none existed, and phasing four product lines under budget pressure. **In progress at departure, and deliberately shorter than the others** · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa012fa5062aa466a1f2a05)
+- [Core Platform: Defining the Shared Services Layer for Three Enterprise Products](./products/core-platform/README.md) - Three products, one foundation underneath them, and a capability model that got smaller twice. A 171-requirement non-functional baseline written where none existed, and four product lines rephased under budget pressure. **In progress at departure** · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa012fa5062aa466a1f2a05)
  
-That last point is worth explaining rather than leaving as a gap. Every other entry here is a long technical deep dive. That one is not, because the detail that would make it a good technical read belongs to a live programme building a product that has not been released. The reasoning is published and the specifics are not. The entry says so up front.
+That entry is deliberately shorter than the rest. The detail that would make it a good technical read belongs to a live programme building an unreleased product, so the reasoning is published and the specifics are not.
  
 ### XaaS portfolio
  
@@ -34,7 +34,7 @@ Five pillars of a converged consumption services portfolio, built as a Technical
  
 Products built rather than managed. These are my own, built solo with AI assistance, and written up with the same honesty as the enterprise work, including what broke.
  
-- [Cloudio Learning: A Provider-Agnostic Learning Tracker](./products/prototypes/cloudio-learning/README.md) - taken live, then stopped by an internationalisation retrofit that cost more to fix than to rebuild around. **Live, development paused** - [try it](https://learn.cloudio.co.uk) · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa1a05873b2473ada3250ef)
+- [Cloudio Learning: A Learning Tracker Built Solo with AI, and Why It Stopped](./products/prototypes/cloudio-learning/README.md) - taken live, then stopped by an internationalisation retrofit that cost more to fix than to rebuild around. **Live, development paused** - [try it](https://learn.cloudio.co.uk) · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa1a05873b2473ada3250ef)
  
 ### Earlier work
  
