@@ -4,7 +4,7 @@ The engineering-level companion to the Bare Metal as a Service case study: how a
  
 ## The Context / Challenge
  
-Bare Metal as a Service was defined as an upsell layer inside the Converged Infrastructure as a Service PRD, at an enterprise data infrastructure and hybrid cloud vendor, and delivered by integrating Canonical MaaS into UCP Advisor. The CIaaS entry covers the wider portfolio and roadmap it sat inside ([Converged Infrastructure as a Service](../converged-infrastructure-as-a-service/README.md)).
+Bare Metal as a Service was defined as an upsell layer inside the Converged Infrastructure as a Service PRD, at an enterprise data infrastructure and hybrid cloud vendor, and delivered by integrating Canonical MaaS into the platform management plane. The CIaaS entry covers the wider portfolio and roadmap it sat inside ([Converged Infrastructure as a Service](../converged-infrastructure-as-a-service/README.md)).
  
 The problem it solved was mundane and expensive. Provisioning was manual for everyone who bought the vendor's hardware or services. Every operating system and hypervisor install, for every customer, was done by hand. That cost was carried by customers, by partners implementing on their behalf, and by the vendor's own professional services and implementation teams, all doing the same repetitive work separately.
  
@@ -32,7 +32,7 @@ The case put forward before this went onto the roadmap rested on three distinct 
  
 **Customers** gained faster time to deployment without needing to buy or run provisioning tooling themselves, and without the vendor's professional services team in the loop for every install.
  
-**The vendor's own teams** gained an internal tool. This is the part that mattered most and the part that is easiest to miss. Because UCP Advisor was the management plane for compute, networking and storage, including converged infrastructure, integrating provisioning into it meant the professional services and implementation teams could use the same capability internally, on every customer engagement, not only the ones that had bought Bare Metal as a Service. The cost of manual provisioning was being paid by the business on every single deployment, and this removed it regardless of whether the feature was ever sold.
+**The vendor's own teams** gained an internal tool. This is the part that mattered most and the part that is easiest to miss. Because that platform was the management plane for compute, networking and storage, including converged infrastructure, integrating provisioning into it meant the professional services and implementation teams could use the same capability internally, on every customer engagement, not only the ones that had bought Bare Metal as a Service. The cost of manual provisioning was being paid by the business on every single deployment, and this removed it regardless of whether the feature was ever sold.
  
 That third argument is also what won the engineering team over, covered further below.
  
@@ -46,11 +46,11 @@ MaaS was the one that went into the product. Its fit was less about any single f
  
 The build-versus-buy argument was also a cost and effort argument, and that was made explicitly rather than left implied. Every capability MaaS already provided was one the development team did not have to write, test, document and maintain, on top of a backlog that had nothing to do with bare metal.
  
-### Integrating with UCP Advisor
+### Integrating with the platform management plane
  
-UCP Advisor was the management plane for compute, networking and storage across the portfolio, so it was the only sensible place for this to live. Putting provisioning anywhere else would have created a second console for something that belonged in the first.
+the platform management plane was the management plane for compute, networking and storage across the portfolio, so it was the only sensible place for this to live. Putting provisioning anywhere else would have created a second console for something that belonged in the first.
  
-The integration was built against Canonical's documented integration approach and MaaS's REST API, by the UCP Advisor development team. MaaS handles the provisioning mechanics underneath, machine discovery, commissioning, image deployment and power control, while UCP Advisor provides the interface and the entitlement layer on top. The result was that any UCP Advisor user could use bare metal provisioning, provided the Bare Metal as a Service licence had been purchased.
+The integration was built against Canonical's documented integration approach and MaaS's REST API, by the management plane development team. MaaS handles the provisioning mechanics underneath, machine discovery, commissioning, image deployment and power control, while the management plane provides the interface and the entitlement layer on top. The result was that any user of the management plane could use bare metal provisioning, provided the Bare Metal as a Service licence had been purchased.
  
 Supported deployment targets at MVP were ESXi, Windows, and the three Linux distributions the customer base was actually running at the time, Red Hat, CentOS and Ubuntu. Users were free to add their own images beyond that set, but those were explicitly outside the supported matrix. Drawing that line mattered, since MaaS itself supports a much wider range and the temptation was to advertise everything it could technically do rather than what the support organisation could actually stand behind.
  
@@ -70,7 +70,7 @@ The engineering lead's warning about resistance was accurate and worth taking se
  
 The approach was to argue it on their terms rather than the product's. That meant showing where it sat on the roadmap and why it was sequenced there, who the target customers actually were and why they were different from the first attempt's, what the differentiator was, and how much build effort the third-party route removed compared with writing it again. The internal-tool argument did a lot of the work here, since it meant the team's own colleagues in professional services and implementation would benefit directly.
  
-Working closely with the UCP Advisor developers and their lead through the planning and research, rather than arriving with a finished proposal, is what turned scepticism into support.
+Working closely with the the platform management plane developers and their lead through the planning and research, rather than arriving with a finished proposal, is what turned scepticism into support.
  
 The result was better than the process deserved. The team delivered the MVP in a couple of two-week sprints, and chose to prioritise it against a backlog of items they could reasonably have put first.
  
@@ -79,16 +79,16 @@ The result was better than the process deserved. The team delivered the MVP in a
 - Business Model Canvas setting out the proposition, the three beneficiary groups and the case for revisiting a previously failed product
 - Build-versus-buy evaluation across Ironic, Tinkerbell, Metal3 and Canonical MaaS, narrowed to two candidates for the development team to prototype
 - Go-to-market repositioning from a direct enterprise feature to a partner-led deployment service, opening a segment the first attempt could not reach
-- Requirements and product definition for the MaaS integration into UCP Advisor, built with the UCP Advisor development team against Canonical's documented integration approach and REST API
+- Requirements and product definition for the MaaS integration into the management plane, built with the management plane development team against Canonical's documented integration approach and REST API
 - Supported operating system and hypervisor matrix at MVP: ESXi, Windows, Red Hat, CentOS and Ubuntu, with customer-supplied images permitted but explicitly unsupported
-- Entitlement model tying the capability to a purchased Bare Metal as a Service licence within UCP Advisor
+- Entitlement model tying the capability to a purchased Bare Metal as a Service licence within the platform management plane
 - Roadmap position as a defined upsell layer within the CIaaS PRD, with tiered licensing against further MaaS capability scoped and under decision
 - Internal tooling case for the professional services and implementation teams, used to build engineering support for the work
  
 ## The Outcome / Impact
  
 - Replaced manual, per-deployment operating system and hypervisor provisioning with automated provisioning available directly from the platform management plane
-- Delivered as a billable customer feature, ready to buy and scheduled into the next UCP Advisor release
+- Delivered as a billable customer feature, ready to buy and scheduled into the next platform release
 - Opened a partner-led services motion, where partners could productise deployment work they had previously absorbed as manual effort
 - Gave the vendor's own professional services and implementation teams the same automation internally, removing manual provisioning effort across all customer deployments rather than only those that bought the feature
 - Turned a previously failed in-house product into a shipped capability, by repositioning the proposition and integrating a third party rather than rebuilding
@@ -96,7 +96,7 @@ The result was better than the process deserved. The team delivered the MVP in a
  
 ### State at departure
  
-The MVP was complete and scheduled into the next UCP Advisor release as a billable feature. Tiered licensing against MaaS's wider capability was scoped and under decision. Kubernetes and OpenShift on bare metal were recognised demand but not yet scoped. Further MaaS capability was added to the product after this role ended.
+The MVP was complete and scheduled into the next platform release as a billable feature. Tiered licensing against MaaS's wider capability was scoped and under decision. Kubernetes and OpenShift on bare metal were recognised demand but not yet scoped. Further MaaS capability was added to the product after this role ended.
  
 ### A note on figures
  
