@@ -1,4 +1,4 @@
-# Core Platform: Deciding What Deserves to Be a Product
+# Core Platform: Defining the Shared Services Layer for Three Enterprise Products
  
 > Lead Product Manager for the shared platform underneath three enterprise products, in a safety-critical industry that runs around the clock. Eight months, 47 formal product artefacts, and a platform that got smaller twice.
  
