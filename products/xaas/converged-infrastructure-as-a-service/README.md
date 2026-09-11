@@ -7,7 +7,7 @@
  
 ## The Context / Challenge
  
-I joined an enterprise data infrastructure and hybrid cloud vendor as a Technical Product Manager, owning Converged Infrastructure as a Service end to end within the business's XaaS portfolio, reporting to the Director of Services Product Management for XaaS. CIaaS packaged the business's own converged compute, networking and storage stack as a subscription service rather than a capital purchase, managed through UCP Advisor and taken to market through the partner channel.
+I joined an enterprise data infrastructure and hybrid cloud vendor as a Technical Product Manager, owning Converged Infrastructure as a Service end to end within the business's XaaS portfolio, reporting to the Director of Services Product Management for XaaS. CIaaS packaged the business's own converged compute, networking and storage stack as a subscription service rather than a capital purchase, managed through the platform management plane and taken to market through the partner channel.
  
 Two buyers wanted it, for related but distinct reasons. Partners wanted a full-stack service they could resell as their own cloud offering, without carrying the capital cost of the estate or building the operational capability behind it. Large enterprises wanted the same thing internally, serving multiple business units out of one multi-tenant platform, so individual units consumed infrastructure as a service rather than each procuring and running their own. Both groups were already being offered this shape of thing by Dell APEX, HPE GreenLake, NetApp Keystone and Pure, so the demand was proven. What the business did not have was a credible answer to it.
  
@@ -15,7 +15,7 @@ What existed instead was a legacy converged infrastructure blueprint that was no
  
 Enterprise deals were worse than that suggests. Capex and some Opex modelling did exist for enterprise customers, but every single one was custom. Each deal was built from scratch out of a large configuration list in Salesforce, with bespoke support arranged alongside it. There was no reference architecture tied to consumption modelling, no t-shirt sizing, and no repeatable link between what a customer asked for and what it cost to deliver. Hundreds of valid configurations existed on paper, which sounds like flexibility and in practice meant nothing could be quoted quickly, priced consistently, or handed to a partner to sell without the vendor in the room.
  
-Underneath both of those sat a structural problem with how the business itself was organised. CIaaS was not built from components my team owned. Compute, networking, storage and UCP Advisor were each owned by separate product teams, and the organisation was heavily siloed when I started. A product assembled entirely out of other teams' components, in a business where those teams did not routinely talk to each other, has a dependency problem before it has an engineering one.
+Underneath both of those sat a structural problem with how the business itself was organised. CIaaS was not built from components my team owned. Compute, networking, storage and the management plane were each owned by separate product teams, and the organisation was heavily siloed when I started. A product assembled entirely out of other teams' components, in a business where those teams did not routinely talk to each other, has a dependency problem before it has an engineering one.
  
 This entry is the engineering-level companion to the main CIaaS case study. It goes deeper into how the reference architecture, the consumption model, the partner motion and the roadmap were actually built, and into the product management work that ran alongside the engineering, since deciding what to build, what to defer and what to refuse was as much a part of this role as the architecture itself.
  
@@ -50,7 +50,7 @@ Because it had to serve executives, engineers, partners and the commercial teams
 - Networking design and architecture diagrams
 - The layered roadmap, including Bare Metal as a Service as an upsell layer
  
-That last point matters for how the roadmap was structured. Bare Metal as a Service was not a side project, it was a defined upsell inside the same PRD, delivered by integrating Canonical MaaS into UCP Advisor and covered in its own entry ([Bare Metal as a Service](../bare-metal-as-a-service/README.md)).
+That last point matters for how the roadmap was structured. Bare Metal as a Service was not a side project, it was a defined upsell inside the same PRD, delivered by integrating Canonical MaaS into the platform management plane and covered in its own entry ([Bare Metal as a Service](../bare-metal-as-a-service/README.md)).
  
 ### The stack
  
@@ -58,9 +58,9 @@ Compute started on the business's own-branded HPE servers and moved to Supermicr
  
 Cisco was the networking layer, and that was a decision reached by research rather than by default. An Arista build was scoped and put conceptually in place for customers who wanted it, then pulled from the supported configuration set once the research showed Cisco was what the partner base actually used. Arista stayed available as a custom option rather than a maintained standard build. Carrying a second supported networking stack for a demand signal that was not there would have added lifecycle cost to every release for no commercial return.
  
-Storage for CIaaS was mostly the VSP E1090. The lower-tier options, including the E570, were explored and ruled out on performance. That reflected the buyer as much as the benchmark. Customers coming to CIaaS were not looking for entry-level storage, they were buying a full-stack enterprise service, and the storage tier had to match the rest of the stack rather than undercut it.
+Storage for CIaaS was mostly the enterprise-tier array. The lower-tier options, including the mid-range tier, were explored and ruled out on performance. That reflected the buyer as much as the benchmark. Customers coming to CIaaS were not looking for entry-level storage, they were buying a full-stack enterprise service, and the storage tier had to match the rest of the stack rather than undercut it.
  
-WekaIO came in later for the Extreme Tier, for parallel storage use cases needing more IO and throughput than the E1090 could deliver. That work is covered in its own entry, Next Generation Storage-as-a-Service and Extreme Tier, which is still to be written up.
+WekaIO came in later for the Extreme Tier, for parallel storage use cases needing more IO and throughput than the enterprise-tier array could deliver. That work is covered in its own entry, Next Generation Storage-as-a-Service and Extreme Tier, which is still to be written up.
  
 ### Multi-tenancy
  
@@ -80,19 +80,19 @@ A CPQ tool generated the builds and returned the underlying cost base. Everythin
  
 ### The partner quote-to-cash portal
  
-The portal was built with a third-party partner rather than by internal developers, and ran the full commercial path end to end: partner quoting, ordering, procurement, logistics and implementation. A programme manager led the build with the third party, and I was part of the team that built it out, supplying the product side: the pricing and SKU structure, the t-shirt sizes and add-ons, the quote-to-cash and automated procurement requirements, and the integration against UCP Advisor.
+The portal was built with a third-party partner rather than by internal developers, and ran the full commercial path end to end: partner quoting, ordering, procurement, logistics and implementation. A programme manager led the build with the third party, and I was part of the team that built it out, supplying the product side: the pricing and SKU structure, the t-shirt sizes and add-ons, the quote-to-cash and automated procurement requirements, and the integration against the platform management plane.
  
 It started life as a storage-only tool, built for STaaS. The business then found that customers did not want storage on its own, they wanted the full stack, and that finding is what moved CIaaS from one service in a catalogue to the main value driver in the portfolio, with STaaS following as the natural upsell once CIaaS was in place.
  
-### UCP Advisor as the integration layer
+### the platform management plane as the integration layer
  
-UCP Advisor managed the compute, networking and storage stack, and by the time I left it also formed the integration layer into the partner portal. It was the single most important dependency in the product, and the relationship with the team that built it mattered accordingly.
+The platform management plane managed the compute, networking and storage stack, and by the time I left it also formed the integration layer into the partner portal. It was the single most important dependency in the product, and the relationship with the team that built it mattered accordingly.
  
-It was the platform the support and managed services overlay depended on, the target for the observability layer on the roadmap, and the integration point for the Canonical MaaS work behind [Bare Metal as a Service](../bare-metal-as-a-service/README.md). It was also where the [NetFoundry integration](../network-as-a-service/README.md) was planned to land. Close, continuous work with the UCP Advisor development team ran throughout this role rather than being transactional, because almost every roadmap item eventually landed on their backlog.
+It was the platform the support and managed services overlay depended on, the target for the observability layer on the roadmap, and the integration point for the Canonical MaaS work behind [Bare Metal as a Service](../bare-metal-as-a-service/README.md). It was also where the [NetFoundry integration](../network-as-a-service/README.md) was planned to land. Close, continuous work with the management plane development team ran throughout this role rather than being transactional, because almost every roadmap item eventually landed on their backlog.
  
 ### Breaking the silos
  
-None of the above was achievable from inside one team. CIaaS assembled components owned by the compute, networking, storage and UCP Advisor product teams, in a business that was heavily siloed when I started.
+None of the above was achievable from inside one team. CIaaS assembled components owned by the compute, networking, storage and management plane product teams, in a business that was heavily siloed when I started.
  
 The approach was deliberate and incremental. I mapped every touchpoint component, then approached the key stakeholders and principal product managers behind each one directly and put them on a regular one-to-one cadence, initially biweekly and later weekly. Once those relationships held, I brought colleagues from my team into the same conversations, and encouraged my counterpart in the adjacent role to run the same pattern rather than keeping the relationships personal. A QBR-style session every three months then brought the whole group together as a collective.
  
@@ -116,7 +116,7 @@ That negotiation was in play and approaching sign-off when I left. The layer its
  
 Rather than running storage as a parallel service competing for the same customer conversation, STaaS was built into CIaaS as an add-on. That was a product lifecycle decision as much as a commercial one.
  
-It let CIaaS leverage the full range of storage choices for specific use cases instead of being fixed to one array, it removed duplicated effort across two overlapping product lifecycles, and it streamlined the process for partners, who could now scope storage and full stack in one motion. The timing helped, since this coincided with scoping work, BOM building and the wider VSP One and Extreme Tier effort, so the storage options being folded in were the ones already being validated for the next generation of the portfolio.
+It let CIaaS leverage the full range of storage choices for specific use cases instead of being fixed to one array, it removed duplicated effort across two overlapping product lifecycles, and it streamlined the process for partners, who could now scope storage and full stack in one motion. The timing helped, since this coincided with scoping work, BOM building and the wider next-generation storage and Extreme Tier effort, so the storage options being folded in were the ones already being validated for the next generation of the portfolio.
  
 ### Product ownership and go-to-market
  
@@ -158,7 +158,7 @@ The business had built bare metal provisioning in-house before. It sold to exact
  
 The route through was to go third party rather than rebuild, and to do the research properly first. I assessed multiple options, ruled them out on evidence, and narrowed to two candidates presented to the development team to take to MVP. I made the case through a Business Model Canvas, then reinforced it with the things engineering teams actually respond to: visibility of the roadmap the work sat inside, who the target customers were, what the differentiator was, and how much effort and cost the third-party route removed compared with rebuilding in-house.
  
-It worked better than expected. The team delivered the MVP in a couple of two-week sprints, and chose to prioritise it against a backlog of items they could reasonably have put first. It went on to become a billable customer feature, ready to buy and scheduled into the next UCP Advisor release.
+It worked better than expected. The team delivered the MVP in a couple of two-week sprints, and chose to prioritise it against a backlog of items they could reasonably have put first. It went on to become a billable customer feature, ready to buy and scheduled into the next platform release.
  
 ### Winning the internal argument: NetFoundry
  
@@ -166,11 +166,11 @@ NetFoundry started as [Network as a Service](../network-as-a-service/README.md) 
  
 I noticed the problem in the deployment data rather than in a strategy session. Customer-side VPN dependencies were holding up onboarding across hundreds of deployments, and customers had seen how quickly a competing vendor's linking connected out of the box and wanted the same experience. Removing the VPN dependency was worth more than the deployment time it saved, because onboarding delay is the point where a consumption service loses the time-to-value argument it was sold on.
  
-The approach followed the same pattern as Bare Metal but at greater reach, because the value extended well beyond CIaaS to product lines across the whole business. A Business Model Canvas set out the case, I brought all stakeholders together with NetFoundry for a high level demonstration, and key participants then ran multiple sessions at development level to work through how it would integrate and which product teams could leverage it. The plan was integration with UCP Advisor and the partner portal. It was still exploratory and not signed off into the portfolio when I left.
+The approach followed the same pattern as Bare Metal but at greater reach, because the value extended well beyond CIaaS to product lines across the whole business. A Business Model Canvas set out the case, I brought all stakeholders together with NetFoundry for a high level demonstration, and key participants then ran multiple sessions at development level to work through how it would integrate and which product teams could leverage it. The plan was integration with the management plane and the partner portal. It was still exploratory and not signed off into the portfolio when I left.
  
 ### Where it led next
  
-Two further pieces of work grew out of this roadmap and are covered separately. The Extreme Tier, scoped for Edge AI use cases on CIaaS and for workloads needing more IO and throughput than the E1090 could provide without parallel storage, with a PRD created and validated internally and the high and mid level design in progress at departure. That entry is still to be written up. And [AI-as-a-Service](../ai-as-a-service/README.md), proposed as a complementary pillar to the XaaS portfolio and presented to senior stakeholders.
+Two further pieces of work grew out of this roadmap and are covered separately. The Extreme Tier, scoped for Edge AI use cases on CIaaS and for workloads needing more IO and throughput than the enterprise-tier array could provide without parallel storage, with a PRD created and validated internally and the high and mid level design in progress at departure. That entry is still to be written up. And [AI-as-a-Service](../ai-as-a-service/README.md), proposed as a complementary pillar to the XaaS portfolio and presented to senior stakeholders.
  
 ## The Artifacts / Deliverables
  
@@ -198,7 +198,7 @@ Two further pieces of work grew out of this roadmap and are covered separately. 
 - Hundreds of possible configurations reduced to a defined t-shirt size set aligned to real partner customer profiles
 - CIaaS became the main value driver in the portfolio, with STaaS repositioned as the follow-on upsell once CIaaS was in place, after the business found customers wanted the full stack rather than storage alone
 - Drove new partner acquisition through the partner programme, opening a channel motion the previous Capex-only model could not support
-- Measurably reduced organisational silos across the compute, networking, storage and UCP Advisor product teams, with a shared new-and-deprecated roadmap alignment tool adopted across those teams that surfaced and closed a live gap where launched products were selling unsupported hardware
+- Measurably reduced organisational silos across the compute, networking, storage and management plane product teams, with a shared new-and-deprecated roadmap alignment tool adopted across those teams that surfaced and closed a live gap where launched products were selling unsupported hardware
  
 ### State at departure
  
@@ -207,7 +207,7 @@ By the end of this role the service was fully scoped, with the PRDs created and 
 - Infrastructure and infrastructure-with-support layers launched
 - Hypervisor layer sized and priced, with sales and marketing material drafted, held on legal terms while the subscription licensing case approached sign-off
 - Observability and the application layer on the roadmap, the latter deliberately undefined
-- Bare Metal as a Service delivered as a billable customer feature, ready to buy and scheduled into the next UCP Advisor release
+- Bare Metal as a Service delivered as a billable customer feature, ready to buy and scheduled into the next platform release
 - NetFoundry still exploratory, not signed off into the portfolio
 - Extreme Tier scoped with a PRD created and validated internally, high and mid level design in progress
 - AI-as-a-Service pillar presented to senior stakeholders
