@@ -36,6 +36,10 @@ Five pillars of a converged consumption services portfolio, built as a Technical
 - [AI-as-a-Service: An Open Source Alternative to the Nvidia AI Enterprise Stack](./products/xaas/ai-as-a-service/README.md) - a component-level substitution analysis validated against in-house capability, and the missing managed services layer it exposed across the whole AI proposition. **Conceptual, unfinished** · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa0124fce1722a85962c47b)
 - Next Generation Storage-as-a-Service and Extreme Tier - unified platform and parallel storage for high throughput and Edge AI use cases. *In progress*
  
+### Go-to-market
+ 
+- [Hybrid Multi-Cloud Go-to-Market: Migrate First, Modernise Second](./products/hybrid-multicloud-gtm/README.md) - a joint framework built with VMware before the Broadcom acquisition, reframing a stalled bank migration by separating the data centre exit from the modernisation programme, then reused across two UK banks and the wider enterprise base. **Delivered**
+ 
 ### Prototypes
  
 Products built rather than managed. These are my own, built solo with AI assistance, and written up with the same honesty as the enterprise work, including what broke.
@@ -64,6 +68,7 @@ Concept propositions and prototypes designed for a named target company. See [`c
 products/                              Work I've Built entries, mirroring the PortfolioItem records
   _template/                           Starting point for a new entry
   core-platform/                       Shared services platform beneath three enterprise products
+  hybrid-multicloud-gtm/               Joint go-to-market framework with VMware
   new-product-introduction/            Consulting engagement: product function and NPI
   ondemand-cx-reference-architecture/  Private cloud, licensing strategy and hybrid resilience
   prototypes/                          Products built solo rather than managed
