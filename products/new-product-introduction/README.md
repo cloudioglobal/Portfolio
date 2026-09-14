@@ -7,9 +7,11 @@
  
 ## The Context / Challenge
  
-I joined a regional broadband altnet as Head of Product, Growth and New Products, contracted through my own consultancy. The business sold connectivity across fixed wireless and fibre, into rural and semi-rural areas that the larger operators had been slow to reach.
+I joined a regional broadband altnet as Head of Product, Growth and New Products, contracted through my own consultancy. The business sold connectivity across fixed wireless and fibre, into rural and semi-rural areas the larger operators had been slow to reach.
  
-It was sales-led. New products arrived because someone in the business wanted them, not because anyone had established who they were for, what they would cost to run, or what had to be true operationally before they could be sold. There was no product function, no roadmap anyone outside a small group could see, and no repeatable way of getting from an idea to a live service.
+The existing product set had clear drivers and I want to be accurate about that. Fixed wireless was how the business started and was the founding model. The fibre build came through government-backed programmes under BDUK, which is why it existed and where it reached. Neither of those was an accident, and characterising the business as launching things on a whim would be wrong.
+ 
+What did not exist was any way to introduce something new beyond them. The business was sales and marketing led, so anything outside the two established services arrived through commercial appetite rather than through a process that established who it was for, what it would cost to run, and what had to be true operationally before it could be sold. There was no product function, no roadmap anyone outside a small group could see, and no repeatable route from an idea to a live service.
  
 That produces two specific failures, and both were present. Products launch with the operational detail unresolved, so the cost of the gap lands on support and provisioning after the fact. And parts of the business that touch a product but do not own it, billing, support, the supplier relationships, end up carrying assumptions nobody checked.
  
@@ -31,11 +33,13 @@ Roadmap visibility was deliberately tiered. Twelve months was visible across the
  
 That weekly cadence was not a preference, it was a response to reality. The organisation changed direction regularly. A push towards more B2B products, business VOIP among them, arrived while the consumer roadmap was already in flight. A framework that assumes a stable twelve-month plan breaks the first time leadership changes its mind, and then nobody trusts it again. Reviewing the strategic layer weekly meant the roadmap could absorb a change of direction without the whole thing losing credibility.
  
-### Doing it without the roles existing
+### Getting it adopted without authority
  
 The framework is the artefact. Getting an organisation to use it was the harder half, and it is worth being specific about why.
  
-I was a contractor. The roles the framework assumed did not exist, so there was nobody whose job it was to do the thing I needed them to do. Stakeholders were busy with the work they were already accountable for, and a new process arriving from someone brought in on a contract is easy to deprioritise without ever refusing it.
+I was a contractor, and the ownership picture was mixed. Some of the roles the framework assumed did not exist at all. Where they did exist, the responsibility I needed from them was often felt to sit outside that person's remit, and that was usually a fair reading rather than obstruction. Nobody's objectives mentioned new product introduction, so what I was asking for was additional to the job they were actually being measured on.
+ 
+Stakeholders were also busy with work they were already accountable for, and a new process arriving from someone brought in on a contract is easy to deprioritise without ever refusing it.
  
 So it ran on trust rather than authority, and trust took time. I wore a lot of hats early on, doing parts of the work myself that should have belonged elsewhere, because demonstrating what was needed was faster than explaining it. The 4G relaunch was the first one through the framework and I led by example on it deliberately, so that the next time I asked someone for something, there was a finished launch to point at rather than a diagram.
  
