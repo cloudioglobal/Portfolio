@@ -30,11 +30,13 @@ Five pillars of a converged consumption services portfolio, built as a Technical
 - [AI-as-a-Service: An Open Source Alternative to the Nvidia AI Enterprise Stack](./products/xaas/ai-as-a-service/README.md) - a component-level substitution analysis validated against in-house capability, and the missing managed services layer it exposed across the whole AI proposition. **Conceptual, unfinished** · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa0124fce1722a85962c47b)
 - Next Generation Storage-as-a-Service and Extreme Tier - unified platform and parallel storage for high throughput and Edge AI use cases. *In progress*
  
+- [New Product Introduction: Building a Product Function from Nothing](./products/new-product-introduction/README.md) - built a product function from nothing at a regional broadband altnet as a contractor, five launches in eight months, and proved the case well enough that the business created a permanent Director of Product role. **Delivered**
+ 
 ### Prototypes
  
 Products built rather than managed. These are my own, built solo with AI assistance, and written up with the same honesty as the enterprise work, including what broke.
  
-- [Cloudio Learning: A Learning Tracker Built Solo with AI, and Why It Stopped](./products/prototypes/cloudio-learning/README.md) - taken live, then stopped by an internationalisation retrofit that cost more to fix than to rebuild around. **Live, development paused** - [try it](https://learn.cloudio.co.uk) · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa1a05873b2473ada3250ef)
+- [Cloudio Learning: An AI-Native Learning Platform Built Solo, and Why It Stopped](./products/prototypes/cloudio-learning/README.md) - roughly 45 entities, 50 pages and thirteen AI use cases, taken live and then stopped by an internationalisation retrofit that cost more to fix than to rebuild around. **Live, development paused** - [try it](https://learn.cloudio.co.uk) · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa1a05873b2473ada3250ef)
  
 ### Earlier work
  
