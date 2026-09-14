@@ -20,6 +20,12 @@ Product and platform work, each with a matching entry on the website.
  
 That entry is deliberately shorter than the rest. The detail that would make it a good technical read belongs to a live programme building an unreleased product, so the reasoning is published and the specifics are not.
  
+### Consulting engagements
+ 
+Delivered under Cloudio Consulting rather than as an employee.
+ 
+- [New Product Introduction: Building a Product Function from Nothing](./products/new-product-introduction/README.md) - built a product function from nothing at a regional broadband altnet as a contractor, five launches in eight months, and proved the case well enough that the business created a permanent Director of Product role. **Delivered**
+ 
 ### XaaS portfolio
  
 Five pillars of a converged consumption services portfolio, built as a Technical Product Manager at an enterprise data infrastructure and hybrid cloud vendor.
@@ -29,8 +35,6 @@ Five pillars of a converged consumption services portfolio, built as a Technical
 - [Network as a Service: Removing the Customer VPN from Enterprise Onboarding](./products/xaas/network-as-a-service/README.md) - zero trust overlay networking with NetFoundry, found in deployment data and taken through to executive demonstration and joint requirements work with the vendor. **Conceptual, never built** · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa012271e176f503bdf0307)
 - [AI-as-a-Service: An Open Source Alternative to the Nvidia AI Enterprise Stack](./products/xaas/ai-as-a-service/README.md) - a component-level substitution analysis validated against in-house capability, and the missing managed services layer it exposed across the whole AI proposition. **Conceptual, unfinished** · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa0124fce1722a85962c47b)
 - Next Generation Storage-as-a-Service and Extreme Tier - unified platform and parallel storage for high throughput and Edge AI use cases. *In progress*
- 
-- [New Product Introduction: Building a Product Function from Nothing](./products/new-product-introduction/README.md) - built a product function from nothing at a regional broadband altnet as a contractor, five launches in eight months, and proved the case well enough that the business created a permanent Director of Product role. **Delivered**
  
 ### Prototypes
  
@@ -59,6 +63,7 @@ Concept propositions and prototypes designed for a named target company. See [`c
 ```
 products/       Work I've Built entries, mirroring the PortfolioItem records on the website
   core-platform/  The shared services platform work
+  new-product-introduction/  Consulting engagement, product function and NPI
   xaas/           The converged consumption services portfolio
   prototypes/     Products built solo rather than managed
 case-studies/   Client engagement case studies, mirroring the CaseStudy records
