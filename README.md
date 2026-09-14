@@ -61,18 +61,20 @@ Concept propositions and prototypes designed for a named target company. See [`c
 ## How this repository is organised
  
 ```
-products/       Work I've Built entries, mirroring the PortfolioItem records on the website
-  core-platform/  The shared services platform work
-  new-product-introduction/  Consulting engagement, product function and NPI
-  xaas/           The converged consumption services portfolio
-  prototypes/     Products built solo rather than managed
-case-studies/   Client engagement case studies, mirroring the CaseStudy records
-concepts/       Concept propositions, mirroring the ConceptPrototype records
+products/                              Work I've Built entries, mirroring the PortfolioItem records
+  _template/                           Starting point for a new entry
+  core-platform/                       Shared services platform beneath three enterprise products
+  new-product-introduction/            Consulting engagement: product function and NPI
+  ondemand-cx-reference-architecture/  Private cloud, licensing strategy and hybrid resilience
+  prototypes/                          Products built solo rather than managed
+  xaas/                                The converged consumption services portfolio
+case-studies/                          Client engagement case studies, mirroring the CaseStudy records
+concepts/                              Concept propositions, mirroring the ConceptPrototype records
 ```
  
 Each entry lives in its own folder containing a single `README.md`. Related entries may be grouped in a parent folder, as the XaaS pillars and the prototypes are.
  
-Every folder named `_template` is a starting point rather than a published entry, and mirrors the field structure of the matching record type on the website.
+Every folder named `_template` is a starting point rather than a published entry, and mirrors the field structure of the matching record type on the website. There is one under `products/`, `case-studies/` and `concepts/`.
  
 ## Conventions
  
