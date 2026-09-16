@@ -33,15 +33,13 @@ Roadmap visibility was deliberately tiered. Twelve months was visible across the
  
 That weekly cadence was not a preference, it was a response to reality. The organisation changed direction regularly. A push towards more B2B products, business VOIP among them, arrived while the consumer roadmap was already in flight. A framework that assumes a stable twelve-month plan breaks the first time leadership changes its mind, and then nobody trusts it again. Reviewing the strategic layer weekly meant the roadmap could absorb a change of direction without the whole thing losing credibility.
  
-### Getting it adopted without authority
+### Doing it without the product roles in place
  
 The framework is the artefact. Getting an organisation to use it was the harder half, and it is worth being specific about why.
  
-I was a contractor, and the ownership picture was mixed. Some of the roles the framework assumed did not exist at all. Where they did exist, the responsibility I needed from them was often felt to sit outside that person's remit, and that was usually a fair reading rather than obstruction. Nobody's objectives mentioned new product introduction, so what I was asking for was additional to the job they were actually being measured on.
+I was a contractor, and the product roles the process assumed did not exist, so there was nobody whose job it was to do the thing I needed them to do. There were people who could help, and they did, but they were busy with what they were already accountable for, so their help was necessarily limited. Nobody's objectives mentioned new product introduction, so what I was asking for was additional to the job they were actually being measured on.
  
-Stakeholders were also busy with work they were already accountable for, and a new process arriving from someone brought in on a contract is easy to deprioritise without ever refusing it.
- 
-So it ran on trust rather than authority, and trust took time. I wore a lot of hats early on, doing parts of the work myself that should have belonged elsewhere, because demonstrating what was needed was faster than explaining it. The 4G relaunch was the first one through the framework and I led by example on it deliberately, so that the next time I asked someone for something, there was a finished launch to point at rather than a diagram.
+A new process arriving from someone brought in on a contract is easy to deprioritise without ever refusing it. So I had to work hard to earn the trust and build the relationships that made it work, and trust took time. I wore a lot of hats early on, doing parts of the work myself that should have belonged elsewhere, because demonstrating what was needed was faster than explaining it. The 4G relaunch was the first one through the framework and I led by example on it deliberately, so that the next time I asked someone for something, there was a finished launch to point at rather than a diagram.
  
 It compounded. Each launch ran more smoothly than the last, because it became clear what the process needed, what I needed from each team, and what they got back for it. By the later launches I was asking for things people already understood the reason for.
  
