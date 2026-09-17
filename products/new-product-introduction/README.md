@@ -1,19 +1,21 @@
 # New Product Introduction: Building a Product Function from Nothing
  
-> Head of Product, Growth and New Products at a regional broadband altnet, contracted through Cloudio Consulting. Built the new product introduction capability from nothing, launched five products in eight months, and proved the case well enough that the business created a permanent Director of Product role.
+> Joined a regional broadband altnet as Product Lead and moved into Head of Product, Growth and New Products four months in, contracted through Cloudio Consulting. Built the new product introduction capability from nothing, launched five products in eight months, and proved the case well enough that the business created a permanent Director of Product role.
  
 **Type:** case study
 **Status:** delivered, with roadmap items in flight at contract end
  
 ## The Context / Challenge
  
-I joined a regional broadband altnet as Head of Product, Growth and New Products, contracted through my own consultancy. The business sold connectivity across fixed wireless and fibre, into rural and semi-rural areas the larger operators had been slow to reach.
+I joined a regional broadband altnet as Product Lead, contracted through my own consultancy, and moved into Head of Product, Growth and New Products about four months in. The business sold connectivity across fixed wireless and fibre, into rural and semi-rural areas the larger operators had been slow to reach.
  
 The existing portfolio had clear drivers and I want to be accurate about that. Fixed wireless was how the business started and was the founding model, with several options running on their own network. The fibre build came through government-backed programmes under BDUK, again with a range of options, and there was a VOIP service alongside it. None of that was an accident, and characterising the business as launching things on a whim would be wrong.
  
 What did not exist was a repeatable way to introduce anything new. The business was sales and marketing led, so anything outside the established portfolio arrived through commercial appetite rather than through a process that established who it was for, what it would cost to run, and what had to be true operationally before it could be sold. There was no roadmap anyone outside a small group could see, and no route from an idea to a live service that worked twice.
  
 That produces two specific failures, and both were present. Products launch with the operational detail unresolved, so the cost of the gap lands on support and provisioning after the fact. And parts of the business that touch a product but do not own it, billing, support, the supplier relationships, end up carrying assumptions nobody checked.
+ 
+The second turned out to be more expensive than anything on the roadmap. Consumer VOIP had no owner once a customer was set up in the portal, so nobody was checking what happened when one left. We stopped billing them, correctly. The service with the upstream supplier was never cancelled, so we kept paying for it, and where handsets and equipment were on rental we kept paying that too, for people who were no longer customers. It gets its own section further down, because it is the clearest argument in this entry for why the business needed a product function at all.
  
 The second of those turned out to be more expensive than anything on the roadmap.
  
