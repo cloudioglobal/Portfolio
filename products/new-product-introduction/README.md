@@ -1,6 +1,6 @@
 # New Product Introduction: Building a Product Function from Nothing
  
-> Head of Product, Growth and New Products at a regional broadband altnet, contracted through Cloudio Consulting. Built the product function from nothing, launched five products in eight months, and proved the case well enough that the business created a permanent Director of Product role.
+> Head of Product, Growth and New Products at a regional broadband altnet, contracted through Cloudio Consulting. Built the new product introduction capability from nothing, launched five products in eight months, and proved the case well enough that the business created a permanent Director of Product role.
  
 **Type:** case study
 **Status:** delivered, with roadmap items in flight at contract end
@@ -9,9 +9,9 @@
  
 I joined a regional broadband altnet as Head of Product, Growth and New Products, contracted through my own consultancy. The business sold connectivity across fixed wireless and fibre, into rural and semi-rural areas the larger operators had been slow to reach.
  
-The existing product set had clear drivers and I want to be accurate about that. Fixed wireless was how the business started and was the founding model. The fibre build came through government-backed programmes under BDUK, which is why it existed and where it reached. Neither of those was an accident, and characterising the business as launching things on a whim would be wrong.
+The existing portfolio had clear drivers and I want to be accurate about that. Fixed wireless was how the business started and was the founding model, with several options running on their own network. The fibre build came through government-backed programmes under BDUK, again with a range of options, and there was a VOIP service alongside it. None of that was an accident, and characterising the business as launching things on a whim would be wrong.
  
-What did not exist was any way to introduce something new beyond them. The business was sales and marketing led, so anything outside the two established services arrived through commercial appetite rather than through a process that established who it was for, what it would cost to run, and what had to be true operationally before it could be sold. There was no product function, no roadmap anyone outside a small group could see, and no repeatable route from an idea to a live service.
+What did not exist was a repeatable way to introduce anything new. The business was sales and marketing led, so anything outside the established portfolio arrived through commercial appetite rather than through a process that established who it was for, what it would cost to run, and what had to be true operationally before it could be sold. There was no roadmap anyone outside a small group could see, and no route from an idea to a live service that worked twice.
  
 That produces two specific failures, and both were present. Products launch with the operational detail unresolved, so the cost of the gap lands on support and provisioning after the fact. And parts of the business that touch a product but do not own it, billing, support, the supplier relationships, end up carrying assumptions nobody checked.
  
@@ -33,27 +33,29 @@ Roadmap visibility was deliberately tiered. Twelve months was visible across the
  
 That weekly cadence was not a preference, it was a response to reality. The organisation changed direction regularly. A push towards more B2B products, business VOIP among them, arrived while the consumer roadmap was already in flight. A framework that assumes a stable twelve-month plan breaks the first time leadership changes its mind, and then nobody trusts it again. Reviewing the strategic layer weekly meant the roadmap could absorb a change of direction without the whole thing losing credibility.
  
-### Doing it without the product roles in place
+### Doing it without the supporting resource
  
 The framework is the artefact. Getting an organisation to use it was the harder half, and it is worth being specific about why.
  
-I was a contractor, and the product roles the process assumed did not exist, so there was nobody whose job it was to do the thing I needed them to do. There were people who could help, and they did, but they were busy with what they were already accountable for, so their help was necessarily limited. Nobody's objectives mentioned new product introduction, so what I was asking for was additional to the job they were actually being measured on.
+The constraint was resourcing rather than structure. I was the product function, so that part was covered. The supporting roles the process needed were filled, and the people in them helped where they could, but they had neither the spare resource nor the time that a new product introduction actually asks for. Nobody's objectives mentioned it either, so what I was asking for was additional to the job they were being measured on.
  
-A new process arriving from someone brought in on a contract is easy to deprioritise without ever refusing it. So I had to work hard to earn the trust and build the relationships that made it work, and trust took time. I wore a lot of hats early on, doing parts of the work myself that should have belonged elsewhere, because demonstrating what was needed was faster than explaining it. The 4G relaunch was the first one through the framework and I led by example on it deliberately, so that the next time I asked someone for something, there was a finished launch to point at rather than a diagram.
+A new process arriving from someone brought in on a contract is easy to deprioritise without ever refusing it. So I had to earn the trust and build the relationships that made it work, and trust took time. I wore a lot of hats early on, doing parts of the work myself that should have belonged elsewhere, because demonstrating what was needed was faster than explaining it. The 4G relaunch was the first one through the framework and I led by example on it deliberately, so that the next time I asked someone for something, there was a finished launch to point at rather than a diagram.
  
 It compounded. Each launch ran more smoothly than the last, because it became clear what the process needed, what I needed from each team, and what they got back for it. By the later launches I was asking for things people already understood the reason for.
  
 The outcome I would point at ahead of any individual launch is that the business went on to hire a Director of Product. That role did not exist when I arrived and would not have been created if the concept had not been proven and the organisation had not been brought along with it. A contractor's job is usually to deliver a thing. This delivered a thing and left behind a reason for a permanent function.
  
-### Helping the PMO launch outside my own roadmap
+### Kickstarting a launch I did not own
  
 The same approach got used somewhere I did not own.
  
-The PMO was launching a 1Gb fixed wireless service and it had accumulated a lot of unnecessary stage gates. The team was not clear on what they had to do, or why several of the gates existed at all, which is the usual signature of a process that has grown by accretion rather than design.
+The PMO was launching a 1Gb fixed wireless service and it had stalled. The team was not clear on what they had to do or why, and the people whose input they needed were not in the conversation.
  
-I put it on the roadmap so it was visible alongside everything else, brought the stakeholders together, gave them guidance on what actually needed to happen, and pushed collaboration as the operating principle rather than sequential sign-off. That opened up communication and got the wider teams supporting it properly.
+What it needed was a kickstart rather than a critique. I brought it under the framework so it was visible on the roadmap alongside everything else, got the stakeholders in the same place, and pushed collaboration as the operating principle rather than sequential sign-off. That was enough to get communication open and the wider teams supporting it properly.
  
-Then I stepped back once it was moving, because it was not mine and taking it over would have taught the organisation nothing. It belongs in this entry because getting people talking to each other was a real intervention at a point the business needed it, not because I delivered the service.
+Then I handed it back once it was moving. That was the right call for two reasons. The PMO had their own build stage gates and processes for the engineering side of the business, with dedicated resources assigned to them, and those needed to be followed rather than worked around. And I had other value-added services to launch.
+ 
+It belongs in this entry because getting it moving again was a real intervention at a point the business needed it, not because I delivered the service. Knowing when to hand something back is part of the job.
  
 ### What got launched
  
@@ -99,7 +101,9 @@ The order lands in a central Salesforce report, supplied daily to the connectivi
  
 Router ordering was where the biggest single change happened. It had been manual, one customer at a time. I led the team that worked with the router supplier's portal API to automate it end to end, supporting the Salesforce development to make it work. The same API registered the unit in the management platform automatically, so a router arrived already visible to support rather than needing to be added by hand.
  
-The remaining manual link was the daily Salesforce report to the connectivity supplier, and that was only manual because their portal could not yet take it. They were building that capability and we made sure we were inside their development feedback loop rather than waiting for whatever they produced. That turned out to matter more than it sounds. They had not planned to include the UPRN checker in the address handling, and without address-level checking the whole automation is useless, because you cannot commit an order you cannot fulfil. Raising that early is the difference between a supplier integration that works and one that arrives finished and wrong.
+The remaining manual link was the daily Salesforce report to the connectivity supplier, and that was only manual because their portal could not yet take it. They were building that capability and we made sure we were inside their development feedback loop rather than waiting for whatever they produced. The point I pushed hardest was address-level checking. They had not planned to include UPRN handling, and without it the whole automation is useless, because you cannot commit an order you cannot fulfil. That was still an open conversation when I left rather than something landed.
+ 
+Alongside it I did a lot of research into an API approach that would tie UPRN address data to the Openreach network and to mobile coverage, so availability could be confirmed at a specific address rather than a postcode, for fibre and for 4G and 5G. That was research and design. It was not implemented before I left.
  
 The same portal was to handle 4G and 5G SIM ordering for the current 4G service and the planned 5G one, and the UPRN address automation was built into the workflows to cover those too, so the mobile products would run through the same path rather than needing their own.
  
@@ -111,7 +115,9 @@ Through the router ecosystem I found and engaged a UK partner who could automate
  
 Units grading too low to reissue went to recycling, which put the whole thing inside the environmental commitments the business already had rather than making it a separate initiative.
  
-The same partner was going to run the same partial automation we had built for the current router supply, which meant reusing the workflows already created and the Salesforce development already done, with minimal change. That reuse is the argument that made it viable. A returns operation proposed from nothing is a project. A returns operation that runs on workflows you have already built and paid for is an extension.
+The same partner could run the same partial automation we had built for the current router supply, which meant reusing the workflows already created and the Salesforce development already done, with minimal change. That reuse is the argument that made it viable. A returns operation proposed from nothing is a project. A returns operation that runs on workflows you have already built and paid for is an extension.
+ 
+To be clear about where it got to: I designed it, scoped it and presented it, and it was not taken forward at that point. It sat on the roadmap tied to a wider open decision about the router estate, where the options were adding Eero, staying with the current platform, running both, or renegotiating with the incumbent. Until that was settled there was no sense committing to a returns operation for hardware we might be moving away from.
  
 ### The one that was not a product launch
  
@@ -149,7 +155,9 @@ My contract came to an end. Bringing the role in-house on payroll would have pla
  
 It has since gone into administration and been acquired, with most of the organisation made redundant.
  
-That matters to how this work should be read, in both directions. It is not a story that ends in a thriving business, and pretending otherwise would be dishonest. But the thing the business needed most in that period was revenue that did not depend on its own network, and on-net connectivity was dropping considerably. Looking at that curve, the off-net Openreach SoGEA and FTTP services are the reason there was anywhere else for those connections to go. Without them the position would have been materially worse, sooner.
+That matters to how this work should be read, in both directions. It is not a story that ends in a thriving business, and pretending otherwise would be dishonest.
+ 
+The off-net services are worth being precise about, because it would be easy to overclaim them. They were built to reach customers the on-net network did not serve, which is a footprint problem rather than a rescue. What they also turned out to be was complementary. There were months when on-net sales were light, and off-net carried the numbers through them. A portfolio that can sell to an address whether or not you own the infrastructure to it is more resilient than one that cannot, and that resilience was useful sooner than anyone expected it to be.
  
 The rest of the portfolio pulled in the same direction. The cyber security offer raised average revenue per user on connections that already existed. The 4G relaunch retained customers who had no other option available to them at all. The router platform took cost out of every new connection and gave the business a credible alternative to fall back on when the committed order with the incumbent came up for replenishment, which is leverage it did not previously have. And the internal 5G units, had they landed, would have opened a further revenue line while removing an engineer visit from every install, where the visit costs considerably more than the device.
  
@@ -162,16 +170,16 @@ The rest of the portfolio pulled in the same direction. The cyber security offer
 - 5G hardware scoping and testing across external and internal units, with the internal unit removing the engineer visit and widening the addressable customer set
 - Manual configuration process for off-net Openreach connectivity on the incumbent hardware, run alongside the new platform to honour an existing twelve thousand unit commitment
 - End-to-end order automation: UPRN address checking into the sales journey, website order, Salesforce order capture, and full API automation of router ordering and management platform registration, replacing a manual per-customer process
-- Supplier development influence: secured UPRN address checking into the connectivity supplier's portal roadmap, without which the automation would not have functioned
-- Router refurbishment and returns proposition with a UK partner: collection, inspection, grading, reissue and recycling, designed to reuse the existing workflows and Salesforce development
+- Research into an API approach tying UPRN address data to the Openreach network and to mobile coverage, so availability could be confirmed at address level for fibre and for 4G and 5G. Research and design, not implemented before departure
+- Router refurbishment and returns proposition with a UK partner, covering collection, inspection, grading, reissue and recycling, designed to reuse existing workflows. Designed, scoped and presented, held on the roadmap pending a wider decision on the router estate
 - Consumer VOIP leakage: identified, escalated with leadership backing, and supported through record matching between supplier accounts and Salesforce
  
 ## The Outcome / Impact
  
 - Built a product function where none existed, moving the business from sales and marketing led to product led, and changing how new products were found, prioritised and launched
 - Proved the case well enough that the business went on to create a permanent Director of Product role, which did not exist when I arrived
-- Extended the same approach outside my own roadmap, helping the PMO strip unnecessary stage gates from a 1Gb fixed wireless launch and getting the wider teams collaborating on it, then stepping back once it was moving
-- Opened an off-net revenue path through Openreach SoGEA and FTTP, which is where connections could go as on-net connectivity dropped considerably, and without which the business would have been in a materially worse position sooner
+- Kickstarted a stalled 1Gb fixed wireless launch outside my own roadmap, bringing it under the framework and getting the wider teams talking to each other, then handing it back to the PMO to run through their own engineering build process
+- Opened an off-net revenue path through Openreach SoGEA and FTTP, reaching customers the on-net network did not serve, which also proved complementary by carrying sales numbers through months when on-net was light
 - Five products launched in eight months, four from scratch and one relaunched in two weeks
 - Halved the per-unit router cost across new connections, alongside unified cloud management that gave support visibility of a connection it previously could not see
 - Removed the engineer visit from the 5G install path by specifying an internal unit, reducing cost to serve and widening the addressable customer set
