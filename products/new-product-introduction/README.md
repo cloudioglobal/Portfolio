@@ -169,7 +169,7 @@ The rest of the portfolio pulled in the same direction. The cyber security offer
 - Twelve to eighteen month product roadmap spanning broadband, fixed wireless, 4G and 5G, cyber security, VOIP and value-added services, managed through Jira
 - Five product launches in eight months: a consumer cyber security offer, Openreach SoGEA, Openreach FTTP, a relaunched 4G fixed wireless service, and a new router platform
 - Router platform business case and migration: halved per-unit hardware cost, unified cloud management for the support team, pre-built configuration shipped by the vendor, eight months of free platform use and training, and partner pricing among the best given to any UK partner
-- 5G hardware scoping and testing across external and internal units, with the internal unit removing the engineer visit and widening the addressable customer set
+- 5G hardware scoping and testing across external and internal units, **identifying the internal unit as the one that would remove the engineer visit and widen the addressable customer set**
 - Manual configuration process for off-net Openreach connectivity on the incumbent hardware, run alongside the new platform to honour an existing twelve thousand unit commitment
 - End-to-end order automation: UPRN address checking into the sales journey, website order, Salesforce order capture, and full API automation of router ordering and management platform registration, replacing a manual per-customer process
 - Research into an API approach tying UPRN address data to the Openreach network and to mobile coverage, so availability could be confirmed at address level for fibre and for 4G and 5G. Research and design, not implemented before departure
@@ -184,9 +184,9 @@ The rest of the portfolio pulled in the same direction. The cyber security offer
 - Opened an off-net revenue path through Openreach SoGEA and FTTP, reaching customers the on-net network did not serve, which also proved complementary by carrying sales numbers through months when on-net was light
 - Five products launched in eight months, four from scratch and one relaunched in two weeks
 - Halved the per-unit router cost across new connections, alongside unified cloud management that gave support visibility of a connection it previously could not see
-- Removed the engineer visit from the 5G install path by specifying an internal unit, reducing cost to serve and widening the addressable customer set
+- **Scoped and tested an internal 5G unit that would remove the engineer visit from the install path, reducing cost to serve and widening the addressable customer set once the 5G service launched**
 - Replaced manual per-customer router ordering with full API automation, including automatic registration into the management platform
-- Secured address-level UPRN checking into a supplier's portal roadmap, protecting an automation that would otherwise have shipped unusable
+- **Pushed for address-level UPRN checking in the connectivity supplier's portal, without which the order automation could not work. Still an open conversation at contract end rather than something landed**
 - Designed a refurbishment loop that reused existing workflows rather than requiring new build, with recycling for units below grade, aligning it to the business's environmental commitments
 - Surfaced consumer VOIP leakage where the business had stopped billing departed customers while continuing to pay for their supplier service and rented equipment, and got leadership backing to close it
 - Framework adopted beyond me, with the B2B business development manager running the business VOIP supplier engagement through it, supported by scoping guidance and a standing link into the Salesforce development team
