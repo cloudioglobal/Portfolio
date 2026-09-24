@@ -1,13 +1,13 @@
 # New Product Introduction: Building a Product Function from Nothing
  
-> Joined a regional broadband altnet as Product Lead and moved into Head of Product, Growth and New Products four months in, contracted through Cloudio Consulting. Built the new product introduction capability from nothing, launched five products in eight months, and proved the case well enough that the business created a permanent Director of Product role.
+> Joined a regional broadband altnet as Product Lead and moved into **Interim** Head of Product, Growth and New Products four months in, contracted through Cloudio Consulting. Built the new product introduction capability from nothing, launched five products in eight months, and proved the case well enough that the business created a permanent Director of Product role.
  
 **Type:** case study
 **Status:** delivered, with roadmap items in flight at contract end
  
 ## The Context / Challenge
  
-I joined a regional broadband altnet as Product Lead, contracted through my own consultancy, and moved into Head of Product, Growth and New Products about four months in. The business sold connectivity across fixed wireless and fibre, into rural and semi-rural areas the larger operators had been slow to reach.
+I joined a regional broadband altnet as Product Lead, contracted through my own consultancy, and moved into **Interim** Head of Product, Growth and New Products about four months in. The business sold connectivity across fixed wireless and fibre, into rural and semi-rural areas the larger operators had been slow to reach.
  
 The existing portfolio had clear drivers and I want to be accurate about that. Fixed wireless was how the business started and was the founding model, with several options running on their own network. The fibre build came through government-backed programmes under BDUK, again with a range of options, and there was a VOIP service alongside it. None of that was an accident, and characterising the business as launching things on a whim would be wrong.
  
