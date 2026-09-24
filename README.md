@@ -24,7 +24,7 @@ That entry is deliberately shorter than the rest. The detail that would make it 
  
 Delivered under Cloudio Consulting rather than as an employee.
  
-- [New Product Introduction: Building a Product Function from Nothing](./products/new-product-introduction/README.md) - built a product function from nothing at a regional broadband altnet as a contractor, five launches in eight months, and proved the case well enough that the business created a permanent Director of Product role. **Delivered**
+- [New Product Introduction: Building a Product Function from Nothing](./products/new-product-introduction/README.md) - built a product function from nothing at a regional broadband altnet as a contractor, five launches in eight months, and proved the case well enough that the business created a permanent Director of Product role. **Delivered** **· [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa7f5c9bd1c86c4b9319387)**
  
 ### XaaS portfolio
  
@@ -38,13 +38,13 @@ Five pillars of a converged consumption services portfolio, built as a Technical
  
 ### Go-to-market
  
-- [Hybrid Multi-Cloud Go-to-Market: Migrate First, Modernise Second](./products/hybrid-multicloud-gtm/README.md) - a joint framework built with VMware before the Broadcom acquisition, reframing a stalled bank migration by separating the data centre exit from the modernisation programme, then reused across two UK banks and the wider enterprise base. **Delivered**
+- [Hybrid Multi-Cloud Go-to-Market: Migrate First, Modernise Second](./products/hybrid-multicloud-gtm/README.md) - a joint framework built with VMware before the Broadcom acquisition, reframing a stalled bank migration by separating the data centre exit from the modernisation programme, then reused across two UK banks and the wider enterprise base. **Delivered** **· [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa81ac052a0c949852880b4)**
  
 ### Prototypes
  
 Products built rather than managed. These are my own, built solo with AI assistance, and written up with the same honesty as the enterprise work, including what broke.
  
-- [Cloudio Learning: An AI-Native Learning Platform Built Solo, and Why It Stopped](./products/prototypes/cloudio-learning/README.md) - roughly 45 entities, 50 pages and thirteen AI use cases, taken live and then stopped by an internationalisation retrofit that cost more to fix than to rebuild around. **Live, development paused** - [try it](https://learn.cloudio.co.uk) · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa1a05873b2473ada3250ef)
+- [**Cloudio Learning: An AI Training Platform Built Solo, Why It Stopped, and Why It Restarted**](./products/prototypes/cloudio-learning/README.md) - **a training platform for AI and its associated technologies**, roughly 45 entities, 50 pages and thirteen AI use cases, **taken live, stopped by an internationalisation retrofit, and now being finished as English only. Live, back in development** · [try it](https://learn.cloudio.co.uk) · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa1a05873b2473ada3250ef)
  
 ### Earlier work
  
