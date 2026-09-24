@@ -143,11 +143,11 @@ We started building out what that service would look like at component level, an
  
 That reuse was not planned. I built the matrix to answer a licensing question and it turned out to answer a service design question as well, which is a decent argument for doing this kind of work at component level in the first place.
  
-### Taking it to the global go-to-market team
+### **Proposing an AI managed services offering**
  
-I raised the managed services gap at the global go-to-market team meeting, and I framed it deliberately as a precondition rather than a feature request. A feature request goes on a backlog. A precondition of the proposition being sellable goes into the plan.
+**I proposed an AI managed services offering to the services lead and the AI go-to-market team, extending the infrastructure and professional services proposition to create new recurring revenue opportunities. My case was that managed services belonged in the proposition from the start rather than as an add-on later, because a customer who cannot run the fabric cannot really buy the platform.**
  
-It went into the project plan as a future requirement. That is the most durable thing to come out of this work, because it persists whether or not the open source stack was ever adopted, and because it changes what the AI proposition has to include before it can be sold rather than just what it could include eventually.
+**That is the most durable thing to come out of this work, because the gap stands whether or not the open source stack was ever adopted, and it changes what the AI proposition has to include before it can be sold rather than just what it could include eventually.**
  
 ### The pitch, and where it stopped
  
@@ -175,13 +175,13 @@ The second is that I framed licence replacement as a saving before I had modelle
 - Internal capability validation: identified and consulted the teams already running the proposed tools, establishing that Slurm, Kubernetes and surrounding competence existed in-house and could support the main components
 - Managed services definition work at component level with the support and managed services lead, reading the substitution matrix from both directions, what it takes to operate and what it takes to operate on a customer's behalf
 - Cost case for licence replacement, presented to leadership
-- Global go-to-market escalation establishing managed services as a precondition of the AI infrastructure proposition rather than an optional extra, entered into the project plan as a future requirement
+- **AI managed services offering proposed to the services lead and the AI go-to-market team, extending the infrastructure and professional services proposition into recurring revenue**
  
 ## The Outcome / Impact
  
 - Pitched to leadership and received positively, with the internal capability finding as the deciding factor. Establishing that Slurm and Kubernetes competence already existed in-house is what moved the proposal from a cost argument to an executable one
 - Licence cost avoidance was substantial in the reference configuration, where a per-GPU Nvidia AI Enterprise licence across a minimum eight-GPU system, duplicated across two sites for resiliency, meant sixteen licences before any workload ran. Absolute figures are omitted here in line with the rest of this portfolio
-- The managed services gap is the most durable output. Raised at the global go-to-market meeting as a precondition rather than a feature, it entered the project plan as a future requirement and persists independently of whether the open source stack was ever adopted
+- The managed services gap is the most durable output. **I proposed an AI managed services offering to the services lead and the AI go-to-market team, and the gap stands** independently of whether the open source stack was ever adopted
 - Not completed. The architecture was still being ratified with several substitutions unconfirmed when my role was made redundant. No pilot ran, nothing was built, and I have no visibility of whether it was taken forward
 - The method is the transferable result: substitution argued at component level so it could be checked rather than merely asserted, validated against internal capability rather than against vendor claims, and explicit about the two capabilities that could not be replaced
 - Third application of the same build-versus-buy test used for Bare Metal as a Service and the NetFoundry proposal, reaching the opposite conclusion because the inputs differed. Existing in-house capability, industry-standard components and a licence scaling per GPU on GPU-dominated infrastructure changed the answer, which is what a test is supposed to do
