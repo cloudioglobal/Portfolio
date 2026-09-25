@@ -145,7 +145,7 @@ Built for one bank and designed from the start to be used again.
  
 It went to the second UK-headquartered bank, where the details differed but the shape held: an estate that had to move, a modernisation ambition slowing the move, and fragmented ownership of cloud-native services. Then wider, beyond financial services, because nothing in the core argument is specific to banking. Data centre exits, lease expiries, regulatory pressure and stalled modernisation programmes are common across large enterprises.
  
-Together those engagements supported enterprise licence agreement revenue in the hundreds of millions of dollars across subscriptions, professional services and ongoing operations. The exact figure sits on my CV rather than here, in line with the rest of this portfolio.
+**Together those engagements supported enterprise licence agreement revenue across subscriptions, professional services and ongoing operations.**
  
 ### What I would do differently, and what I do not know
  
@@ -172,7 +172,7 @@ I left in 2023 and do not know how much continued to be used, or whether any of 
 ## The Outcome / Impact
  
 - Reframed a stalled migration at a large UK-headquartered bank by separating the data centre exit from the modernisation programme, making an immovable exit deadline achievable
-- Supported enterprise licence agreement revenue in the hundreds of millions of dollars across two UK-headquartered banks, spanning subscriptions, professional services and ongoing operations
+- **Supported enterprise licence agreement revenue across two UK-headquartered banks,** spanning subscriptions, professional services and ongoing operations
 - Built as a reusable framework rather than a single engagement, and reused at a second bank and then across the wider enterprise base beyond financial services
 - Established a discovery-led motion where the customer's own estate data produced the migration plan, changing the opening conversation from a product pitch into findings about their environment
 - Made the same discovery investment serve two purposes, migration wave planning and micro-segmentation policy design, which is what justified the effort to a customer reluctant to fund an assessment
