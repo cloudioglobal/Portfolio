@@ -1,11 +1,11 @@
 # Cloudio Learning Technical Deep Dive: AI-Assisted Product Engineering, Opt-In Retention and an Internationalisation Retrofit That Failed, and the Restart That Followed
  
-> The engineering-level companion to the Cloudio Learning case study: how the platform was built, what was deliberately traded off, what broke badly enough to stop development, and how it was restarted as a narrower, English-only AI training platform.
+> The engineering-level companion to the Cloudio Learning case study: how the platform was built, what was deliberately traded off, what broke badly enough to stop development, and how it was restarted as an English-only platform aimed at AI learning and relevant areas.
  
 **Type:** prototype
-**Status:** live at https://learn.cloudio.co.uk, back in development as an English-only AI training platform
+**Status:** live at https://learn.cloudio.co.uk, restarted as an English-only platform aimed at AI learning
  
-The app is publicly reachable and the core loop works. Some parts were broken by the internationalisation retrofit described below, and resolving that is part of the restart. It is linked here while that work is under way, deliberately, because the failure is the point of the entry rather than something to be tidied away before showing it.
+The app is publicly reachable and the core loop works. Some parts were broken by the internationalisation retrofit described below, and resolving that is part of the restart. It is linked here while that work continues, deliberately, because the failure is the point of the entry rather than something to be tidied away before showing it.
  
 ## The Context / Challenge
  
@@ -188,19 +188,19 @@ Verification was preview-first against real production data, with console errors
 - **One component per file.** With 50-plus pages, sprawl is the default outcome unless something prevents it.
 - **Query invalidation over hand-rolled state.** All data fetching through TanStack React Query, with mutations invalidating the relevant keys so the interface stays in sync without manual bookkeeping.
  
-### The restart: revert, rescope, finish
+### The restart: English only, AI focused
  
-When development stopped, the plan was a full rebuild with internationalisation present from the first commit. That plan has been replaced by a simpler one. The platform has been reverted to English only, and the work now is finishing it and resolving everything the retrofit broke.
+When development stopped, the plan was a full rebuild with internationalisation present from the first commit. That plan was replaced by a simpler one. The platform has been restarted with multi-language support removed and English as the only language, and the work since has been resolving what the retrofit broke.
  
-Two decisions came with that. First, multi-language support was dropped rather than fixed. The retrofit was what broke the platform, and the cost of finishing it was what made continuing uneconomic, so the requirement was removed instead of paid for. Second, the product was rescoped. It is now a training platform for AI and its associated technologies, pre-loaded with AI content by default, 382 AI courses and 62 AI podcasts at the time of writing. It can still be used for any subject, but AI is the default.
+Two decisions came with that. First, multi-language support was removed rather than fixed. The retrofit was what broke the platform, and the cost of finishing it was what made continuing uneconomic, so the requirement was taken out instead of paid for. Second, the product was rescoped. It is now aimed at AI learning and relevant areas, pre-loaded with AI content by default, 382 AI courses and 62 AI podcasts at the time of writing. It can still be used for any subject, but AI is the default.
  
 The lesson from the failure is unchanged, and the sections that follow describe it as it was understood when development stopped.
  
-This entry does not claim the restart is complete. Parts of the app are still being worked through, and nothing here should be read as a statement that everything the retrofit broke has been fixed.
+This entry does not claim the work is finished. Resolving everything the retrofit broke is part of the restart, and nothing here should be read as a statement that it is all done.
  
 ### The original rebuild plan, now superseded
  
-This was the plan when development stopped. The revert to English only described above has replaced it, but the reasoning in it still stands.
+This was the plan when development stopped. The restart described above has replaced it, but the reasoning in it still stands.
  
 The i18n debt, the component sprawl and the known gaps are not going to be patched. The plan is a rebuild structured as six sequential prompts to the development agent, each with a defined scope so the agent has clear boundaries and each phase completes before the next begins.
  
@@ -215,9 +215,9 @@ Two things are unresolved in that plan and should be settled before any of it is
  
 ### Known issues and honest limitations
  
-These describe the state when development stopped. The revert to English only is intended to resolve the internationalisation items among them.
+These describe the state when development stopped. Multi-language support has since been removed, so the internationalisation items among them no longer apply.
  
-- At the time of the original write-up, internationalisation was non-functional outside the Settings page and the retrofit was paused by decision. The platform has since been reverted to English only, and resolving what the retrofit broke is part of the restart.
+- At the time of the original write-up, internationalisation was non-functional outside the Settings page and the retrofit was paused by decision. The platform has since been restarted with multi-language support removed, and resolving what the retrofit broke is part of that work.
 - Client-side search and filtering is fine at a catalogue of a few hundred courses and would need server-side pagination and filtering well before ten thousand.
 - Instrumented analytics is a real gap. The platform can show a user their own data but cannot show aggregate behaviour patterns, so there is no behavioural evidence for any of the retention design decisions above.
 - Missing keys in non-English locales fall back to English. That is correct behaviour rather than a bug, but it means non-English users see English wherever a key is untranslated.
@@ -251,20 +251,20 @@ The second-order effect matters as much. Because execution was cheap, scope grew
 - Seeded catalogue, now 382 AI courses and 62 AI podcasts after the rescope, with filtering, sorting, verified reviews and a community submission and admin review pipeline
 - Enterprise tier: organisations with domain-based auto-assignment, teams, manager dashboard with skill-gap analysis, org-scoped gamification, white-label branding, bulk user import and role-gated admin tooling
 - Skills layer connecting completion to capability: taxonomy, course-to-skill mapping, proficiency tracking, goals, quiz and code assessments, and peer endorsements
-- Twelve-locale internationalisation scaffold with right-to-left support, persistence and fallback chain, functional on Settings and paused elsewhere, later reverted to English only
+- Twelve-locale internationalisation scaffold with right-to-left support, persistence and fallback chain, functional on Settings and paused elsewhere, later removed when the platform was restarted as English only
 - Systematic i18n audit cross-referencing every translation call against three locale files, with the minimal English-locale fix that resolved visible breakage across all twelve languages in one edit
-- Six-prompt rebuild strategy encoding the architectural lessons as constraints for the development agent rather than as documentation, later superseded by the decision to revert to English only and finish the existing platform
+- Six-prompt rebuild strategy encoding the architectural lessons as constraints for the development agent rather than as documentation, later superseded by the decision to remove multi-language support, restart as English only and finish the existing platform
  
 ## The Outcome / Impact
  
-- Platform live and publicly reachable at https://learn.cloudio.co.uk, with the core loop functional: courses can be added from any URL, study time tracked across navigation, progress marked, and the week seen at a glance. Parts of the app were broken by the retrofit, and it was linked in that state rather than withdrawn while the restart is finished
+- Platform live and publicly reachable at https://learn.cloudio.co.uk, with the core loop functional: courses can be added from any URL, study time tracked across navigation, progress marked, and the week seen at a glance. Parts of the app were broken by the retrofit, and it was linked in that state rather than withdrawn while resolving what it broke
 - Roughly 45 entities, 50-plus pages and 100-plus components delivered solo, which is the clearest available evidence of what AI-assisted development compresses and what it does not
 - Internationalisation retrofit failed and stopped development. The single most valuable output of the project is the resulting principle: i18n is a day-one architectural decision, its retrofit cost is superlinear, and no amount of incremental patching converges
-- Failure converted into a design constraint rather than carried as debt or hidden. Multi-language support was dropped rather than retrofitted, and the platform was rescoped to AI and associated technologies
+- Failure converted into a design constraint rather than carried as debt or hidden. Multi-language support was removed rather than retrofitted, and the platform restarted aimed at AI learning and relevant areas
 - Scope discipline identified as the second transferable lesson. The failure-first filter held for four phases and then stopped being applied once AI assistance made new layers cheap enough that build friction no longer acted as an accidental prioritisation mechanism
 - No instrumented analytics, therefore no behavioural evidence for any retention decision made here. The opt-in gamification, guest overlay and floating timer designs are reasoned rather than validated, and are stated that way deliberately
 - No validated demand beyond the builder's own daily use, which is a genuine signal but a single-user one
  
 ## Living document
  
-This is a living document. More detail will be added under the relevant section as it comes to mind, rather than as a one-off write-up. The current state reflects the platform as built, the decisions as made, the failures as experienced and the lessons as taken. The restart is recorded here as an update, since the platform is being finished rather than rebuilt from scratch.
+This is a living document. More detail will be added under the relevant section as it comes to mind, rather than as a one-off write-up. The current state reflects the platform as built, the decisions as made, the failures as experienced and the lessons as taken. The restart is recorded here as an update, since the platform was restarted rather than rebuilt from scratch.
