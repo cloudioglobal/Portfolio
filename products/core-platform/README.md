@@ -1,6 +1,6 @@
 # Core Platform: Defining the Shared Services Layer for Three Enterprise Products
  
-> Lead Product Manager for the shared platform underneath three enterprise products, in a safety-critical industry that runs around the clock. Eight months, 47 formal product artefacts, and a platform that got smaller twice.
+> Lead Product Manager for the shared platform underneath three enterprise products, in a safety-critical industry that runs around the clock. Eight months in the role, 47 formal product artefacts in four months, and a platform that got smaller twice.
  
 **Type:** case study
 **Status:** in progress at departure
@@ -174,7 +174,7 @@ Some of the most useful things I did were not artefacts. They were noticing gaps
  
 ## The Artifacts / Deliverables
  
-47 formal product artefacts in eight months.
+47 formal product artefacts in four months.
  
 - Capability requirements documents covering purpose, users, outcomes, ownership, dependencies, risks and scope boundaries
 - Feature matrices scoping each capability against MoSCoW for the first release, with identifiers, priorities, inclusions, success criteria and dependencies
@@ -197,7 +197,7 @@ Some of the most useful things I did were not artefacts. They were noticing gaps
 - Led phasing across four product lines under budget constraint, defining the minimum foundation the first product needed and asking the other two product managers to cut against that line
 - Ran cross-product design work that changed capability boundaries rather than screens
 - Raised customer migration, resilience levels and cloud portability as gaps while they were still cheap to close
-- Produced 47 artefacts in eight months with AI assistance and validation, while the decisions stayed with the people in the room
+- Produced 47 artefacts in four months with AI assistance and validation, while the decisions stayed with the people in the room
  
 This is product definition rather than production performance. The non-functional targets are what the platform was designed to meet, not results achieved.
  
