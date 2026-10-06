@@ -1,11 +1,11 @@
-# Cloudio Learning Technical Deep Dive: AI-Assisted Product Engineering, Opt-In Retention and an Internationalisation Retrofit That Failed
+# Cloudio Learning Technical Deep Dive: AI-Assisted Product Engineering, Opt-In Retention and an Internationalisation Retrofit That Failed, and the Restart That Followed
  
-> The engineering-level companion to the Cloudio Learning case study: how the platform was built, what was deliberately traded off, and what broke badly enough to stop development and force a rebuild.
+> The engineering-level companion to the Cloudio Learning case study: how the platform was built, what was deliberately traded off, what broke badly enough to stop development, and how it was restarted as a narrower, English-only AI training platform.
  
 **Type:** prototype
-**Status:** live at https://learn.cloudio.co.uk, development paused pending rebuild
+**Status:** live at https://learn.cloudio.co.uk, back in development as an English-only AI training platform
  
-The app is publicly reachable and the core loop works. Parts of it do not, following the internationalisation retrofit described below. It is linked here in that state deliberately, because the failure is the point of the entry rather than something to be tidied away before showing it.
+The app is publicly reachable and the core loop works. Some parts were broken by the internationalisation retrofit described below, and resolving that is part of the restart. It is linked here while that work is under way, deliberately, because the failure is the point of the entry rather than something to be tidied away before showing it.
  
 ## The Context / Challenge
  
@@ -126,7 +126,7 @@ This is a first-class experience rather than a degraded one. Guest queries are g
  
 Four substantial layers were built above the core loop. Each is defensible on its own terms and the accumulation is the problem, which is covered honestly in the next section.
  
-**Discovery and catalogue.** 126 pre-seeded courses, filterable by type, difficulty and cost, sortable by title, rating, recency and provider, with a one-click "add to my plan" path. Filtering is client-side, which is correct at this scale and would not survive a catalogue an order of magnitude larger. A community submission pipeline lets users propose courses with suggested placement and supporting reasoning, which admins accept or reject, so the catalogue can grow without admin-only curation. Reviews carry a verified flag when the reviewer completed the course, which is a cheap and effective trust signal.
+**Discovery and catalogue.** A pre-seeded catalogue, now 382 AI courses and 62 AI podcasts after the rescope, filterable by type, difficulty and cost, sortable by title, rating, recency and provider, with a one-click "add to my plan" path. Filtering is client-side, which is correct at this scale and would not survive a catalogue an order of magnitude larger. A community submission pipeline lets users propose courses with suggested placement and supporting reasoning, which admins accept or reject, so the catalogue can grow without admin-only curation. Reviews carry a verified flag when the reviewer completed the course, which is a cheap and effective trust signal.
  
 **Social and collaboration.** Study groups with public, private and invite-only visibility, threaded discussions with upvotes and pinning attached to either a course or a group, friend requests with rate limiting to prevent spam, peer course recommendations, and shared notes. Moderation, reporting, banning and consent tracking were built alongside rather than afterwards, because a social surface without them is a liability rather than a feature.
  
@@ -188,7 +188,19 @@ Verification was preview-first against real production data, with console errors
 - **One component per file.** With 50-plus pages, sprawl is the default outcome unless something prevents it.
 - **Query invalidation over hand-rolled state.** All data fetching through TanStack React Query, with mutations invalidating the relevant keys so the interface stays in sync without manual bookkeeping.
  
-### The rebuild strategy
+### The restart: revert, rescope, finish
+ 
+When development stopped, the plan was a full rebuild with internationalisation present from the first commit. That plan has been replaced by a simpler one. The platform has been reverted to English only, and the work now is finishing it and resolving everything the retrofit broke.
+ 
+Two decisions came with that. First, multi-language support was dropped rather than fixed. The retrofit was what broke the platform, and the cost of finishing it was what made continuing uneconomic, so the requirement was removed instead of paid for. Second, the product was rescoped. It is now a training platform for AI and its associated technologies, pre-loaded with AI content by default, 382 AI courses and 62 AI podcasts at the time of writing. It can still be used for any subject, but AI is the default.
+ 
+The lesson from the failure is unchanged, and the sections that follow describe it as it was understood when development stopped.
+ 
+This entry does not claim the restart is complete. Parts of the app are still being worked through, and nothing here should be read as a statement that everything the retrofit broke has been fixed.
+ 
+### The original rebuild plan, now superseded
+ 
+This was the plan when development stopped. The revert to English only described above has replaced it, but the reasoning in it still stands.
  
 The i18n debt, the component sprawl and the known gaps are not going to be patched. The plan is a rebuild structured as six sequential prompts to the development agent, each with a defined scope so the agent has clear boundaries and each phase completes before the next begins.
  
@@ -203,8 +215,10 @@ Two things are unresolved in that plan and should be settled before any of it is
  
 ### Known issues and honest limitations
  
-- Internationalisation is non-functional outside the Settings page. The wider app carries hardcoded English. The visible breakage is fixed, the retrofit is paused by decision.
-- Client-side search and filtering is fine at 126 courses and would need server-side pagination and filtering well before ten thousand.
+These describe the state when development stopped. The revert to English only is intended to resolve the internationalisation items among them.
+ 
+- At the time of the original write-up, internationalisation was non-functional outside the Settings page and the retrofit was paused by decision. The platform has since been reverted to English only, and resolving what the retrofit broke is part of the restart.
+- Client-side search and filtering is fine at a catalogue of a few hundred courses and would need server-side pagination and filtering well before ten thousand.
 - Instrumented analytics is a real gap. The platform can show a user their own data but cannot show aggregate behaviour patterns, so there is no behavioural evidence for any of the retention design decisions above.
 - Missing keys in non-English locales fall back to English. That is correct behaviour rather than a bug, but it means non-English users see English wherever a key is untranslated.
 - Two locale files appear to be stale duplicates of their counterparts and had syntax errors fixed during the audit. The import resolves to the other versions. They should be removed in the rebuild.
@@ -234,23 +248,23 @@ The second-order effect matters as much. Because execution was cheap, scope grew
 - AI layer running thirteen use cases through a single LLM integration, covering course import from any URL, twelve-month curriculum generation at onboarding, a dual-persona study assistant, natural-language catalogue search, quiz generation, summaries and recommendations, with model selection driven by cost and web-search compatibility
 - Opt-in gamification system: points, XP, levels, eleven badge types, streaks, time-bound challenges, and an anonymised handle-based leaderboard, with opt-in enforced at the data model rather than only in the interface
 - Guest conversion model: full product visibility with blurred and locked write actions, locked button interception, persistent demo banner and a funnel that asks for commitment at the point of highest intent
-- Seeded catalogue of 126 courses with filtering, sorting, verified reviews and a community submission and admin review pipeline
+- Seeded catalogue, now 382 AI courses and 62 AI podcasts after the rescope, with filtering, sorting, verified reviews and a community submission and admin review pipeline
 - Enterprise tier: organisations with domain-based auto-assignment, teams, manager dashboard with skill-gap analysis, org-scoped gamification, white-label branding, bulk user import and role-gated admin tooling
 - Skills layer connecting completion to capability: taxonomy, course-to-skill mapping, proficiency tracking, goals, quiz and code assessments, and peer endorsements
-- Twelve-locale internationalisation scaffold with right-to-left support, persistence and fallback chain, functional on Settings and paused elsewhere
+- Twelve-locale internationalisation scaffold with right-to-left support, persistence and fallback chain, functional on Settings and paused elsewhere, later reverted to English only
 - Systematic i18n audit cross-referencing every translation call against three locale files, with the minimal English-locale fix that resolved visible breakage across all twelve languages in one edit
-- Six-prompt rebuild strategy encoding the architectural lessons as constraints for the development agent rather than as documentation
+- Six-prompt rebuild strategy encoding the architectural lessons as constraints for the development agent rather than as documentation, later superseded by the decision to revert to English only and finish the existing platform
  
 ## The Outcome / Impact
  
-- Platform live and publicly reachable at https://learn.cloudio.co.uk, with the core loop functional: courses can be added from any URL, study time tracked across navigation, progress marked, and the week seen at a glance. Parts of the app remain broken from the paused retrofit, and it is linked in that state rather than withdrawn
+- Platform live and publicly reachable at https://learn.cloudio.co.uk, with the core loop functional: courses can be added from any URL, study time tracked across navigation, progress marked, and the week seen at a glance. Parts of the app were broken by the retrofit, and it was linked in that state rather than withdrawn while the restart is finished
 - Roughly 45 entities, 50-plus pages and 100-plus components delivered solo, which is the clearest available evidence of what AI-assisted development compresses and what it does not
 - Internationalisation retrofit failed and stopped development. The single most valuable output of the project is the resulting principle: i18n is a day-one architectural decision, its retrofit cost is superlinear, and no amount of incremental patching converges
-- Failure converted into a design constraint rather than carried as debt or hidden. The rebuild is scoped around the lesson, with i18n present from the first commit
+- Failure converted into a design constraint rather than carried as debt or hidden. Multi-language support was dropped rather than retrofitted, and the platform was rescoped to AI and associated technologies
 - Scope discipline identified as the second transferable lesson. The failure-first filter held for four phases and then stopped being applied once AI assistance made new layers cheap enough that build friction no longer acted as an accidental prioritisation mechanism
 - No instrumented analytics, therefore no behavioural evidence for any retention decision made here. The opt-in gamification, guest overlay and floating timer designs are reasoned rather than validated, and are stated that way deliberately
 - No validated demand beyond the builder's own daily use, which is a genuine signal but a single-user one
  
 ## Living document
  
-This is a living document. More detail will be added under the relevant section as it comes to mind, rather than as a one-off write-up. The current state reflects the platform as built, the decisions as made, the failures as experienced and the lessons as taken. The rebuild will produce a successor to this document rather than an edit of it.
+This is a living document. More detail will be added under the relevant section as it comes to mind, rather than as a one-off write-up. The current state reflects the platform as built, the decisions as made, the failures as experienced and the lessons as taken. The restart is recorded here as an update, since the platform is being finished rather than rebuilt from scratch.
