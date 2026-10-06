@@ -3,9 +3,9 @@
 > The engineering-level companion to the Cloudio Learning case study: how the platform was built, what was deliberately traded off, what broke badly enough to stop development, and how it was restarted as an English-only platform aimed at AI learning and relevant areas.
  
 **Type:** prototype
-**Status:** live at https://learn.cloudio.co.uk, restarted as an English-only platform aimed at AI learning
+**Status:** live at https://learn.cloudio.co.uk, restarted as an English-only AI learning platform, still built to teach any subject
  
-The app is publicly reachable and the core loop works. Some parts were broken by the internationalisation retrofit described below, and resolving that is part of the restart. It is linked here while that work continues, deliberately, because the failure is the point of the entry rather than something to be tidied away before showing it.
+The app is publicly reachable and the core loop works. The internationalisation retrofit described below broke parts of it, and most of that has since been fixed. It stays linked here because the failure is the point of the entry rather than something to be tidied away before showing it.
  
 ## The Context / Challenge
  
@@ -192,11 +192,11 @@ Verification was preview-first against real production data, with console errors
  
 When development stopped, the plan was a full rebuild with internationalisation present from the first commit. That plan was replaced by a simpler one. The platform has been restarted with multi-language support removed and English as the only language, and the work since has been resolving what the retrofit broke.
  
-Two decisions came with that. First, multi-language support was removed rather than fixed. The retrofit was what broke the platform, and the cost of finishing it was what made continuing uneconomic, so the requirement was taken out instead of paid for. Second, the product was rescoped. It is now aimed at AI learning and relevant areas, pre-loaded with AI content by default, 382 AI courses and 62 AI podcasts at the time of writing. It can still be used for any subject, but AI is the default.
+Two decisions came with that. First, multi-language support was removed rather than fixed. The retrofit was what broke the platform, and the cost of finishing it was what made continuing uneconomic, so the requirement was taken out instead of paid for. Second, the product was pointed at AI. Out of the box it is an AI learning platform, pre-loaded with AI content, 382 AI courses and 62 AI podcasts at the time of writing, but it is still built to teach any subject by design.
  
 The lesson from the failure is unchanged, and the sections that follow describe it as it was understood when development stopped.
  
-This entry does not claim the work is finished. Resolving everything the retrofit broke is part of the restart, and nothing here should be read as a statement that it is all done.
+Most of what the retrofit broke has been fixed, not all of it, and nothing here should be read as a statement that everything is resolved.
  
 ### The original rebuild plan, now superseded
  
@@ -236,7 +236,7 @@ These describe the state when development stopped. Multi-language support has si
  
 The interaction model is part of the story. Product intent was expressed in natural language, the agent generated the code, and iteration aligned the output with the intent. That is a product person directing an engineering collaborator, not an AI building an app unsupervised.
  
-The i18n failure is partly an AI-assistance story, and the useful part is not that the agent got something wrong. It is that the agent had no reason to raise it. Nothing in the request for a dashboard page implies a decision about string handling across twelve locales six months later. Architectural constraints of that kind are the human's job to impose up front, because they are invisible at the level where the work is being requested. AI assistance compresses execution time dramatically and leaves product judgement exactly where it was, which is why the rebuild encodes the constraints into the prompts themselves rather than trusting them to come up naturally.
+The i18n failure is partly an AI-assistance story. Two things were behind what broke. One came from my own experimentation. The other came from the development agent, which was less capable then than it is now: it implemented the change incorrectly and did not warn me how serious it was, even though I had asked before it went ahead. Architectural constraints of that kind are still the human's job to impose up front, because they are invisible at the level where the work is being requested. AI assistance compresses execution time dramatically and leaves product judgement exactly where it was, which is why the original rebuild plan encoded the constraints into the prompts themselves rather than trusting them to come up naturally.
  
 The second-order effect matters as much. Because execution was cheap, scope grew faster than validation did. The friction that normally stops a solo builder from shipping an enterprise tier was gone, and nothing replaced it. That is a transferable lesson about AI-assisted development rather than about this product: when build cost falls, prioritisation has to become deliberate, because it is no longer enforced by effort.
  
