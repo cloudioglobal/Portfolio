@@ -44,7 +44,7 @@ Five pillars of a converged consumption services portfolio, built as a Technical
  
 Products built rather than managed. These are my own, built solo with AI assistance, and written up with the same honesty as the enterprise work, including what broke.
  
-- [Cloudio Learning: An AI Training Platform Built Solo, Why It Stopped, and Why It Restarted](./products/prototypes/cloudio-learning/README.md) - a training platform for AI and its associated technologies, roughly 45 entities, 50 pages and thirteen AI use cases, taken live, stopped by an internationalisation retrofit, and now being finished as English only. Live, back in development · [try it](https://learn.cloudio.co.uk) · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa1a05873b2473ada3250ef)
+- [Cloudio Learning: An AI Training Platform Built Solo, Why It Stopped, and Why It Restarted](./products/prototypes/cloudio-learning/README.md) - an AI learning platform that is built to teach anything, roughly 45 entities, 50 pages and thirteen AI use cases, taken live, stopped by an internationalisation retrofit, then restarted as English only with most of what broke now fixed. Live · [try it](https://learn.cloudio.co.uk) · [On the website](https://cloudioconsulting.com/PortfolioDetail?id=6aa1a05873b2473ada3250ef)
  
 ### Earlier work
  
